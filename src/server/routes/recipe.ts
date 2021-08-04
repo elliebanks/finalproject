@@ -14,6 +14,25 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/:id", async (req, res) => {
+  try {
+    res.json((await db.Recipes.oneRecipe(req.params.id))[0]);
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+// router.post("/", async (req, res) => {
+//   try {
+//     res.json((await db.Recipes.postRecipe()));
+//   } catch (e) {
+//     console.log(e);
+//     res.sendStatus(500);
+//   }
+// });
+
+
 
 
 
