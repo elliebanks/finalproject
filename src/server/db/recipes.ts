@@ -11,17 +11,21 @@ const getRecipe = async () =>
   join users on recipes.userid=users.id
   where recipes.id = ?`, [id]);
 
-// const postRecipe = async () =>
-//   Query(
-//     `insert into users(name, email, password) values("${name}", "${email}", "${password}")`
-//   );
+const postUser = async (username) =>
+  Query(
+    `insert into users(username) values(?);`, [username]
+  );
 
-// const postChirp = async (userid, content, location) =>
-//   Query(`insert into chirps(userid, content, location) values(?, ?, ?)`, [
-//     userid,
-//     content,
-//     location,
-//   ]);
+  const postRecipe = async (imagelink, title, directions, description, cooktime, servings, userid) =>
+  Query(
+    `insert into recipes(imagelink, title, directions, description, cooktime, servings, userid) values(?,?,?,?,?,?,?);`, [imagelink, title, directions, description, cooktime, servings, userid]
+  );
+
+  const postIngredients = async (name, amount, recipeid) =>
+  Query(
+    `insert into ingredients(name, amount, recipeid) values(?,?,?);`, [name, amount, recipeid]
+  );
+
 
 
 
@@ -33,6 +37,8 @@ const getRecipe = async () =>
 export default {
   getRecipe,
   oneRecipe,
-//   postRecipe
+  postUser,
+  postRecipe,
+  postIngredients
   
 };

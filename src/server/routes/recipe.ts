@@ -23,14 +23,19 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// router.post("/", async (req, res) => {
-//   try {
-//     res.json((await db.Recipes.postRecipe()));
-//   } catch (e) {
-//     console.log(e);
-//     res.sendStatus(500);
-//   }
-// });
+router.post("/", async (req, res) => {
+  try {
+    let User = await db.Recipes.postUser(req.body.username)
+    let userid = User.insertId
+    let Recipe = await db.Recipes.postRecipe(req.body.imagelink, req.body.title, req.body.directions, req.body.description, req.body.cooktime, req.body.servings, userid  )
+    let recipeid = Recipe.insertId
+    let Ingredients = await db.Recipes.postIngredients(req.body.name, req.body.amount, recipeid)
+    res.sendStatus(200);
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
 
 
 
