@@ -4,9 +4,9 @@ import Recipes from './recipes'
 export const connection = mysql.createConnection({
     host: 'localhost',
     port: 3306,
-    user: 'recipelover',
+    user: 'ellieb',
     password: 'password',
-    database: 'fromskratch'
+    database: 'finalproject'
 })
 
 export const Query = (query: string, values?: Array<string | number>) =>{
