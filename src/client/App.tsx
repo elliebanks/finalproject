@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
+import RecipeSearch from './pages/RecipeSearch';
 
 /* HOOK REACT EXAMPLE */
 const App = (props: AppProps) => {
@@ -15,6 +16,9 @@ const App = (props: AppProps) => {
 
 			<Switch>
 				<Route exact path="/about" component={About}/>
+			</Switch>	
+			<Switch>
+				<Route exact path="/recipes" component={RecipeSearch}/>
 			</Switch>	
 		</BrowserRouter>
 	);

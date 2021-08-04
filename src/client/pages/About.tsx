@@ -12,7 +12,7 @@ let About = () => {
             
             <div className="d-flex justify-content-center mb-3">
                 <h3 className="" id="aboutIntroHeader">
-                    Hi! We are the From.Skratch Team aljglsdgafgslj</h3>
+                    Hi! We are the From.Skratch Team</h3>
             </div>
             <div className="container d-flex justify-content-center w-50">
                 <p className="display-6" id="aboutIntroText">
