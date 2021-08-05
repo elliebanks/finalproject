@@ -4,22 +4,20 @@ import {
 	Switch,
 	Route
 } from "react-router-dom";
+
+/* COMPONENT IMPORTS */
 import Navbar from "./components/Navbar";
+import Footer from './components/Footer';
+
+/* PAGE IMPORTS */
 import Home from "./pages/Home";
 import About from "./pages/About";
 import RecipeSearch from './pages/RecipeSearch';
-import Footer from './components/Footer';
-
 
 /* FONT AWESOME IMPORTS */
 import { library } from '@fortawesome/fontawesome-svg-core'; // import fa library
 import { fab } from '@fortawesome/free-brands-svg-icons'; // import fa brand icons
 import { fas } from '@fortawesome/free-solid-svg-icons'; // import fa solid icons
-
-/* COMPONENT IMPORTS */
-
-
-
 
 library.add(fab, fas); // call fa library function and include svg packages.
 

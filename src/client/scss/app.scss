@@ -1,31 +1,17 @@
-// BootStrap/Fonts/Icon SCSS Import(s) 
-@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
-
-@import './navbar.scss';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Mrs+Sheppards&display=swap');
-
-body {      font-family: 'Montserrat', sans-serif;}
-
-@import './about.scss';
-
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Mrs+Sheppards&display=swap');
-
-// Component SCSS Import(s)
-@import './navbar.scss';
-
-// Page SCSS Import(s)
-@import './about.scss';
-
-// SiteWide SCSS styles
-body {      font-family: 'Montserrat', sans-serif;}
-
 $theme-colors: (
     'primary': #0091ea //Covalence Blue!  :D
 );
 
+/* Bootstrap Import */
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Mrs+Sheppards&display=swap');
+
+/* SCS Imports */
+@import './navbar.scss';
+@import './footer.scss';
 @import './about.scss';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Mrs+Sheppards&display=swap');
 
-
+/* SiteWide Stles */
+body {      font-family: 'Montserrat', sans-serif;}
