@@ -1,0 +1,41 @@
+
+/* Navbar SCSS
+================================================== */
+// Logo Styles
+div.logo {              display: inline-block; margin: 5px 0; color: #876;}
+div.logo span {         color: #354;}
+div.logo a {            text-decoration: none; color: #000;}
+
+// NavMenu Styles
+nav {                   display: relative;}
+ul.nav {                display: block; float: right; margin: 13px 0 0;}
+ul.nav li {             display: inline-block; margin: 10px 10px 10px 0; border-bottom: 1px solid rgb(255, 255, 255);}
+ul.nav li:last-child {      margin: 0;}
+ul.nav li a {           text-decoration: none; color: #000;}
+ul.log-user {           display: block; float: right; padding: 10px; margin: 20px 40px 23px;}
+ul.log-user i {         font-size: 18px; display: block; float: left; margin: 0 0 0 5px; padding: 10px; border-radius: 3px; }
+
+// NavMenu Icon Styles
+svg {                   display: inline-block; margin: 0 4px 0 0;}
+
+// Trash (might need later)
+// div.nav-button {        display: block; float: left;}
+// div.nav-button i {      font-size: 21px; display: block; float: left; margin: 38px;}
+
+
+/* Navbar Typography SCSS
+================================================== */
+// Logo Typography
+div.logo a {        font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 900;}
+span.logo {         font-family: 'Mrs Sheppards', sans-serif; font-size: 30px; font-weight: 300;}
+
+// NavMenu Typography
+ul.nav li a {       font-size: 12px; font-weight: 600;}
+
+/* Hover & Transition Styles
+================================================== */
+// Hovers
+ul.nav li:hover {           border-bottom: 1px solid rgb(000, 000, 000);}
+
+// Transitions
+ul.nav li {			        transition: all 300ms linear; -moz-transition: all 300ms linear; -webkit-transition: all 300ms linear;}
