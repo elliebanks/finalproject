@@ -6,8 +6,6 @@ import { useEffect } from 'react';
 
 const RecipeSearch = () => {
 
-    const element = <FontAwesomeIcon icon={faUtensils} />
-
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
