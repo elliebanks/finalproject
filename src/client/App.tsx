@@ -27,12 +27,7 @@ const App = (props: AppProps) => {
 		<BrowserRouter>
 			<Navbar  />
 
-			<Switch>
-				<Route exact path="/about" component={About}/>
-			</Switch>	
-			<Switch>
-				<Route exact path="/recipes" component={RecipeSearch}/>
-			</Switch>	
+			
 			
 
 			<Footer />	
