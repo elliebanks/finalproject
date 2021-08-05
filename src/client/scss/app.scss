@@ -5,14 +5,13 @@ $theme-colors: (
 /* Bootstrap Import */
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 
-
+/* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Mrs+Sheppards&display=swap');
 
 /* SCS Imports */
 @import './navbar.scss';
 @import './footer.scss';
 @import './about.scss';
-
 
 /* SiteWide Stles */
 body {      font-family: 'Montserrat', sans-serif;}

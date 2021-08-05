@@ -3,4 +3,10 @@
 
 #aboutIntroText {       text-align: center;}
 
+div.card {              width: 18rem;}
 
+.aboutTeam {            margin: 40px auto 70px;}
+.card-img-top {         height: 300px;}
+img.card-img-top {      width: 100%; padding: 10px; object-fit: cover; object-position: center top; object-position: 0 -50px;}
+h1 {                    font-size: 36px; font-weight: 900; letter-spacing: -1px; line-height: 36px;}
+h3 {                    font-size: 24px; margin: 10px 0; letter-spacing: -1px; font-weight: 900; line-height: 24px;}

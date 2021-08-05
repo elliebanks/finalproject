@@ -1,21 +1,68 @@
 
 /* Footer Styles SCSS
 ================================================== */
-.footCall {             width: 60%; padding: 10px 0; display: block;}
-.footImg {              width: 40%; height: 200px; display: block; overflow: hidden;}
-.footImg img {          width: 100%; padding: 10px; object-fit: cover;}
-.footCall a {           padding: 15px; margin: 5px 0; display: inline-block; background-color: #135a28;}
+div.footBg {                background-color: #31cc7f;}
+
+// Footer Callout Styles
+div.footCall {              width: 60%; padding: 10px 0; display: block;}
+div.footImg {               width: 40%; height: 200px; display: block; overflow: hidden;}
+.footImg img {              width: 100%; padding: 10px; object-fit: cover;}
+.footCall a {               padding: 15px; margin: 5px 0; display: inline-block; background-color: #31cc7f;}
+
+// Footer-Logo Styles}
+div.footLogo {                  display: inline-block; color: #fff;}
+div.footLogo span {             color: #fff;}
+div.footLogo a {                text-decoration: none; color: #fff;}
+
+// Footer-Logo Icon Styles
+div.footLogo svg {              display: inline-block; font-size: 18px; margin: 0 6px 0 0;}
+div.footLogo p > svg {          font-size: 10px; margin: 0 0 2px;}
+
+// Footer-Social Icon Styles
+div.footSocial svg {            display: inline-block; font-size: 28px; margin: 12px 12px 0 0;}
+
+// SiteMap Styles
+ul.sitemap {                display: block; padding: 0;}
+ul.sitemap li {             display: inline-block; margin: 0 15px 10px 0; color: #fff;}
+
+//Footer-End styles
+div.footEnd {               padding: 5px 0; border-top: 1px solid #fff; border-image: radial-gradient(#ffffff, #31cc7f) 1;}
+div.footEnd p {             margin: 0; padding: 0; color: #fff;}
+
 
 /* Typography Styles
 ================================================== */
-footer h1 {             font-size: 36px; font-weight: 900; line-height: 36px; color: #000;}
-.footCall a {           font-weight: 900;}
-.footCall a:link, .footCall a:visited, .footCall a:active {      color: #000;}
+//FooterCallout Typography
+footer h1 {                 font-size: 36px; font-weight: 900; line-height: 36px; color: #31cc7f;}
+.footCall a {               font-weight: 900;}
+.footCall a:link, .footCall a:visited, .footCall a:active {      color: #fff;}
+
+footer h3 {                 font-size: 24px; margin: 10px 0; font-weight: 900; line-height: 24px; color: #fff;}
+
+// Footer-Logo Typography
+div.footLogo a {        font-family: 'Montserrat', sans-serif; letter-spacing: -1px; font-size: 20px; font-weight: 900;}
+span.footLogo {         font-family: 'Mrs Sheppards', sans-serif; font-size: 40px; line-height:40px; font-weight: 300;}
+div.footLogo p {        font-size: 12px; text-align: left;}
+
+// Footer Social Typography
+a.iconFace {              color:#1877f2;}
+a.iconTwit {              color:#1da1f2;}
+a.iconTube {              color:#ff0000;}
+a.iconLink {              color:#0a66c2;}
+a.iconGit {               color:#171515;}
+a.iconDisc {              color:#5865F2;}
+
+// Footer Sitemap Typography
+ul.sitemap li a {               font-weight: 300;}
+ul.sitemap li a:link, ul.sitemap li a:visited, ul.sitemap li a:active {      color: #fff;}
+
+//Footer-End styles
+div.footEnd p {         font-size: 12px;}
 
 /* Hover & Transition Styles
 ================================================== */
 // Hovers
-.footCall a:hover {     background-color: #31cc7f; text-decoration: none;}
+.footCall a:hover {         background-color: #31cc7f; text-decoration: none;}
 
 // Transitions
-.footCall a {			        transition: all 300ms linear; -moz-transition: all 300ms linear; -webkit-transition: all 300ms linear;}
+.footCall a {			    transition: all 300ms linear; -moz-transition: all 300ms linear; -webkit-transition: all 300ms linear;}

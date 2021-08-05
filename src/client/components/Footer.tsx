@@ -21,33 +21,50 @@ let Footer = () =>
                         </div>
                     </div>
                 </div>
-                <div className="row bg-info">
-                    <div className="container bg-success">
+                <div className="row footBg pt-2">
+                    <div className="container">
                         <div className="row">
-                            <div className="col">
-                                <div className="logo">
+                            <div className="col mt-2">
+                                <div className="footLogo">
                                     <Link to="/">
-                                        from.<span className="logo">skratch</span>
+                                        from.<span className="footLogo">skratch</span>
                                     </Link>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum molestie lorem id tincidunt. Aliquam ut tristique purus.</p>
+                                    <p>This web application was built with <FontAwesomeIcon icon="heart" /> and <FontAwesomeIcon icon="coffee" /> by TeamTwo, Inc. in greatest city, Birmingham, AL!</p>
                                     <FontAwesomeIcon icon={['fab', 'html5']} />
-                                    <FontAwesomeIcon icon={['fab', 'react']} />
                                     <FontAwesomeIcon icon={['fab', 'css3-alt']} />
                                     <FontAwesomeIcon icon={['fab', 'js-square']} />
                                     <FontAwesomeIcon icon={['fab', 'node-js']} />
+                                    <FontAwesomeIcon icon={['fab', 'react']} />
                                     <FontAwesomeIcon icon={['fab', 'font-awesome-flag']} />
+                                    <FontAwesomeIcon icon={['fab', 'slack']} />
+                                    <FontAwesomeIcon icon={['fab', 'git']} />
                                 </div>
                             </div>
-                            <div className="col">
+                            <div className="col footSocial mt-2">
                                 <h3>Follow Us!</h3>
-                                <FontAwesomeIcon icon={['fab', 'facebook']} />
-                                <FontAwesomeIcon icon={['fab', 'twitter']} />
-                                <FontAwesomeIcon icon={['fab', 'youtube']} />
-                                <FontAwesomeIcon icon={['fab', 'linkedin']} />
+                                <Link className="iconFace" to={{ pathname: "https://facebook.com" }} target="_blank">
+                                    <FontAwesomeIcon icon={['fab', 'facebook']} />
+                                </Link>
+                                <Link className="iconTwit" to={{ pathname: "https://twitter.com" }} target="_blank">
+                                    <FontAwesomeIcon icon={['fab', 'twitter']} />
+                                </Link>
+                                <Link className="iconTube" to={{ pathname: "https://youtube.com" }} target="_blank">
+                                    <FontAwesomeIcon icon={['fab', 'youtube']} />
+                                </Link>
+                                <Link className="iconLink" to={{ pathname: "https://linkedin.com" }} target="_blank">
+                                    <FontAwesomeIcon icon={['fab', 'linkedin']} />
+                                </Link>
+                                <Link className="iconGit" to={{ pathname: "https://github.com" }} target="_blank">
+                                    <FontAwesomeIcon icon={['fab', 'github-alt']} />
+                                </Link>
+                                <Link className="iconDisc" to={{ pathname: "https://discord.com" }} target="_blank">
+                                    <FontAwesomeIcon icon={['fab', 'discord']} />
+                                </Link>
+
                             </div>
-                            <div className="col">
+                            <div className="col mt-2">
                                 <h3>Sitemap</h3>
-                                <ul>
+                                <ul className="sitemap">
                                     <li>
                                         <Link to="/" >
                                             <FontAwesomeIcon icon="home" />
@@ -80,8 +97,8 @@ let Footer = () =>
                                     </li>
                                 </ul>
                             </div>
-                            <div className="container text-center">
-                                copyright info
+                            <div className="container footEnd text-center">
+                                <p>© 2021 TeamTwo, Inc. All rights reserved.</p>
                             </div>
                         </div>
                     </div>
