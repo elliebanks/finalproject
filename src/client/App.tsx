@@ -5,6 +5,7 @@ import {
 	Route
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 import About from "./pages/About";
 import RecipeSearch from './pages/RecipeSearch';
 import Footer from './components/Footer';
@@ -30,9 +31,10 @@ const App = (props: AppProps) => {
 			<Navbar  />
 
 			<Switch>
+				<Route exact path ="/" component={Home} />
+
 				<Route exact path="/about" component={About}/>
-			</Switch>	
-			<Switch>
+			
 				<Route exact path="/recipes" component={RecipeSearch}/>
 			</Switch>	
 			
