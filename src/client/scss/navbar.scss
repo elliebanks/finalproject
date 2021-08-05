@@ -3,13 +3,13 @@
 ================================================== */
 // Logo Styles
 div.logo {              display: inline-block; margin: 5px 0; color: #876;}
-div.logo span {         color: #354;}
-div.logo a {            text-decoration: none; color: #000;}
+div.logo span {         color: #31cc7f;}
+div.logo a {            text-decoration: none; color: #135a28;}
 
 // NavMenu Styles
 nav {                   display: relative;}
-ul.nav {                display: block; float: right; margin: 13px 0 0;}
-ul.nav li {             display: inline-block; margin: 10px 10px 10px 0; border-bottom: 1px solid rgb(255, 255, 255);}
+ul.nav {                display: block; float: right; margin: 10px 0 0;}
+ul.nav li {             display: inline-block; margin: 10px 25px 10px 0; border-bottom: 1px solid rgb(255, 255, 255);}
 ul.nav li:last-child {      margin: 0;}
 ul.nav li a {           text-decoration: none; color: #000;}
 ul.log-user {           display: block; float: right; padding: 10px; margin: 20px 40px 23px;}
@@ -30,7 +30,7 @@ div.logo a {        font-family: 'Montserrat', sans-serif; font-size: 18px; font
 span.logo {         font-family: 'Mrs Sheppards', sans-serif; font-size: 30px; font-weight: 300;}
 
 // NavMenu Typography
-ul.nav li a {       font-size: 12px; font-weight: 600;}
+ul.nav li a {       font-size: 15px; font-weight: 600;}
 
 /* Hover & Transition Styles
 ================================================== */
