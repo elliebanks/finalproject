@@ -1,6 +1,6 @@
 import React from 'react';
 
-let About = () =>
+const About = () =>
 {
     return (
         <>

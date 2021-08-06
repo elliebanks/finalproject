@@ -1,26 +1,28 @@
 import React from "react";
+import "../scss/home.scss";
+import { useState, useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faUtensils, faStopwatch } from '@fortawesome/free-solid-svg-icons';
 
+const Home = () => {
 
-let Home = () => {
     return (
         <>
-
+            {/* CAROUSEL HEADER LANDINGPAGE */}
             <div className="container">
                 <div>
-                    <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselControls" className="carousel slide" data-bs-ride="carousel">
                         <div className="carousel-inner">
                             <div className="carousel-item active">
                                 <img src="./images/food1.jpg" className="d-block w-100" alt="..." />
                             </div>
-                            <div className="carousel-item">
+                            <div className="carousel-item item">
                                 <img src="./images/food2.jpg" className="d-block w-100" alt="..." />
                             </div>
-                            <div className="carousel-item">
+                            <div className="carousel-item item">
                                 <img src="./images/food3.jpg" className="d-block w-100" alt="..." />
                             </div>
-                            <div className="carousel-item">
+                            <div className="carousel-item item">
                                 <img src="./images/foodimage.png" className="d-block w-100" alt="..." />
                             </div>
                         </div>
@@ -28,54 +30,46 @@ let Home = () => {
                 </div>
             </div>
 
-            <div className="container mt-4">
-                <div className="row">
-                    <div className="col">
-                        <h1 className="w-50 display-4">Let's Start Cooking your favorite recipes from.skratch!</h1>
-                        <h4 className="w-50 display-6">Hungry? Need some direction in the kitchen? Want to share with us? Let's go!</h4>
+            {/* MAIN HOME SECTION */}
+            <section className="pt-2" id="homeTileSection">
+                <div className="container">
+                    <div className="row row--35 align-items-center">
+                        <div className="col-lg-5">
+                            <div className="about-inner inner">
+                                <h1 className="section-title diplay-1">Let's Start Cooking your favorite recipes from.Skratch!</h1>
+                                <div className="section-tile-border mt-3"></div>
+                                <p className="section-subtitle text-muted pt-2"><b>Simple ingredients. Simple steps. Delicious results. </b>
+                                    <br />
+                                    From.Skratch is here to help you become the next world-class chef! Need some direction in the kitchen?
+                                    Want to share those delicious recipes you've been experimenting?
+                                    <br />Is it lunch time yet? <em>Bon appétit!</em></p>
+                                <p className="mt-20">
+                                    <a href="#" className="btn btn-dark btn-square hover-effect">Share a Recipe! </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col-lg-5 ml-5">
+                            <div className="thumbnail">
+                                <img className="w-100" src="./images/wok.png" alt="food cooking in pan" />
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col">
-                        <button className="m-3">Submit a Recipe</button>
+            </section>
 
-                        <FontAwesomeIcon icon={faSearch} />
 
-                        <input className="" type="text" placeholder="Find the perfect recipe..." id="homeSearchBar" />
-                        {/* <div className="col" id="submitRecipe"> */}
-                        <button type="button" id="submitButton">
-                            Search
-                        </button>
-                        {/* <div> */}
-
-                    </div>
+            {/* SEARCH BAR SECTION */}
+            <section className="row d-flex justify-content-center" id="searchBarContainer">
+                <div className="">
+                    <img className="" style={{ width: '100%', opacity: '50%' }} src="./images/food2.jpg" />
                 </div>
-            </div>
-            <div className="mt-5 container-fluid w-100 d-flex justify-content-center" id="searchBarContainer">
-                <div className="row">
+                <form className="fieldset">
+                    <legend>SEARCHBAR PLACEHOLDER WILL GO OVER TOP OF IMAGE</legend>
+                </form>
+            </section>
 
 
-                </div>
-            </div>
-
-            <div className="col-md-6 mt-4" id="submitRecipe">
-
-
-            </div>
-
-
-
-            <div id="newRecipes" className="row mt-4">
-
-                <div className="col-md-3 mt-4"></div>
-                <div className="col-md-3 mt-4"></div>
-                <div className="col-md-3 mt-4"></div>
-                <div className="col-md-12 mt-4"></div>
-                <div className="col-md-3 mt-4"></div>
-                <div className="col-md-3 mt-4"></div>
-                <div className="col-md-3 mt-4"></div>
-                <div className="col-md-12 mt-4"></div>
-            </div>
+        
         </>
     );
 };

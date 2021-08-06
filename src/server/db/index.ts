@@ -6,7 +6,7 @@ export const connection = mysql.createConnection({
     port: 3306,
     user: 'ellieb',
     password: 'password',
-    database: 'fromskratch'
+    database: 'finalproject'
 })
 
 export const Query = (query: string, values?: Array<string | number>) =>{
