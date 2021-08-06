@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import RecipeSearch from './pages/RecipeSearch';
+import SubmitForm from './components/Form';
 
 /* FONT AWESOME IMPORTS */
 import { library } from '@fortawesome/fontawesome-svg-core'; // import fa library
@@ -34,6 +35,8 @@ const App = (props: AppProps) => {
 				<Route exact path="/about" component={About}/>
 			
 				<Route exact path="/recipes" component={RecipeSearch}/>
+
+				<Route exact path="/submit" component={SubmitForm}/>
 			</Switch>	
 			
 
