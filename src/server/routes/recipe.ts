@@ -5,8 +5,29 @@ import db from "../db";
 
 router.get("/", async (req, res) => {
   try {
-    const recipes = await db.Recipes.getRecipe();
-    res.json(recipes);
+      const recipes = await db.Recipes.getRecipe();
+      res.json(recipes);
+    } catch (e) {
+      console.log(e);
+      res.sendStatus(500);
+    }
+  }
+);
+
+router.get("/search-user/:username", async (req, res) => {
+  try {
+    const recipesByUsername = await db.Recipes.searchRecipesByUsername(req.params.username);
+    res.json(recipesByUsername);
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.get("/search-ing/:ingname", async (req, res) => {
+  try {
+    const recipesByIngredient = await db.Recipes.searchRecipesByIngredient(req.params.ingname);
+    res.json(recipesByIngredient);
   } catch (e) {
     console.log(e);
     res.sendStatus(500);
