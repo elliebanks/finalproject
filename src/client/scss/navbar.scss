@@ -2,18 +2,18 @@
 /* Navbar SCSS
 ================================================== */
 // Logo Styles
-div.logo {              display: inline-block; margin: 5px 0; color: #876;}
+div.logo {              display: inline-block; margin: 5px 0;}
 div.logo span {         color: #31cc7f;}
 div.logo a {            text-decoration: none; color: #135a28;}
 
 // NavMenu Styles
-nav {                   display: relative;}
+nav {                   height: 60px; width: 100%; margin: 0 0 10px; display: relative;}
 ul.nav {                display: block; float: right; margin: 10px 0 0;}
-ul.nav li {             display: inline-block; margin: 10px 25px 10px 0; border-bottom: 1px solid rgb(255, 255, 255);}
+ul.nav li {             display: inline-block; padding: 10px; margin: 0 15px 0 0; border-bottom: 1px solid transparent;}
 ul.nav li:last-child {      margin: 0;}
 ul.nav li a {           text-decoration: none; color: #000;}
 ul.log-user {           display: block; float: right; padding: 10px; margin: 20px 40px 23px;}
-ul.log-user i {         font-size: 18px; display: block; float: left; margin: 0 0 0 5px; padding: 10px; border-radius: 3px; }
+ul.log-user i {         font-size: 18px; display: block; float: left; margin: 0 0 0 5px; padding: 10px; border-radius: 3px;}
 
 // NavMenu Icon Styles
 svg {                   display: inline-block; margin: 0 4px 0 0;}
@@ -21,7 +21,6 @@ svg {                   display: inline-block; margin: 0 4px 0 0;}
 // Trash (might need later)
 // div.nav-button {        display: block; float: left;}
 // div.nav-button i {      font-size: 21px; display: block; float: left; margin: 38px;}
-
 
 /* Navbar Typography SCSS
 ================================================== */
@@ -39,3 +38,19 @@ ul.nav li:hover {           border-bottom: 1px solid rgb(000, 000, 000);}
 
 // Transitions
 ul.nav li {			        transition: all 300ms linear; -moz-transition: all 300ms linear; -webkit-transition: all 300ms linear;}
+
+
+/* Active Page Styles
+================================================== */
+// Active NavBar Styles
+a.home.active {                color: #fff !important;}
+a.recipes.active {             color: #fff !important;}
+a.submit.active {              color: #fff !important;}
+a.about.active {               color: #fff !important;}
+a.contact.active {             color: #fff !important;}
+
+li.home.active {                border-bottom: 1px solid #31cc7f !important; background-color: #31cc7f;}
+li.about.active {               border-bottom: 1px solid #fff !important; background-color: #f09;}
+
+
+// li.active{         border-bottom: 1px solid #fff !important; background-color: #f09; color: #000 !important;}
