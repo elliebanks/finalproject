@@ -50,8 +50,8 @@ let Home = () => {
                         <label htmlFor="select">Search by:</label>
                         <select onChange={e => setSearchBy(e.target.value)}>
                             <option value="recipe">recipe</option>
-                            <option value="ingredient">Ingredient</option>
-                            <option value="user">User</option>
+                            <option value="ingredient">ingredient</option>
+                            <option value="user">user</option>
                         </select>
 
                         <button type="button" id="submitButton">
@@ -80,7 +80,6 @@ let Home = () => {
 
             <div id="newRecipes" className="row mt-4">
 
-<<<<<<< HEAD
                 <div className="col-md-4 mt-4">
                     <div className="card" style={{backgroundColor: "#0091ea", width: "18rem"}}>(Recipe Title)
                         <img src="..." className="card-img-top" alt="...">
@@ -128,23 +127,9 @@ let Home = () => {
                 <div className="col-md-12 mt-4">
                     
                 </div>
-=======
-                <div className="col-md-3 mt-4"></div>
-                <div className="col-md-3 mt-4"></div>
-                <div className="col-md-3 mt-4"></div>
-                <div className="col-md-12 mt-4"></div>
-                <div className="col-md-3 mt-4"></div>
-                <div className="col-md-3 mt-4"></div>
-                <div className="col-md-3 mt-4"></div>
-                <div className="col-md-12 mt-4"></div>
->>>>>>> 5adb04a8486a42385994998b8337fed9fa452f63
             </div>
         </>
     );
 };
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 5adb04a8486a42385994998b8337fed9fa452f63
 export default Home;
