@@ -64,7 +64,7 @@ const Home = () => {
                     <img className="" style={{ width: '100%', opacity: '50%' }} src="./images/food2.jpg" />
                 </div>
                 <form className="fieldset">
-                    <legend>SEARCHBAR PLACEHOLDER WILL GO OVER TOP OF IMAGE</legend>
+                    <legend>SEARCHBAR PLACEHOLDER PlaceHolderrrr WILL GO OVER TOP OF IMAGE</legend>
                 </form>
             </section>
 
