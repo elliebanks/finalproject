@@ -12,6 +12,21 @@ $theme-colors: (
 @import './navbar.scss';
 @import './footer.scss';
 @import './about.scss';
+@import './recipes.scss';
 
 /* SiteWide Stles */
 body {      font-family: 'Montserrat', sans-serif;}
+
+div.leftColumn {        padding: 15px 40px 15px 0; margin: 0;}
+div.rightColumn {       padding: 0; margin: 0;}
+div.secTitle {          margin: 0 0 30px;}
+div.secContent {        display: block;}
+div.secConHead {        width: 100%; display: block;}
+div.secConHead img {    width: 100%; object-fit: cover;}
+
+/* SiteWide Typography */
+h6 {                    font-size: 12px; }
+
+section h1 {            margin: 0; padding: 0; color:#fff;}
+section h6 {            margin: 0; padding: 0; color:#fff;}
+section p {             font-size: 16px;}

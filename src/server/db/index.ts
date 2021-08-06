@@ -1,13 +1,19 @@
 import * as mysql from 'mysql'
 import Recipes from './recipes'
+require('dotenv').config();
 
 export const connection = mysql.createConnection({
-    host: 'localhost',
-    port: 3306,
-    user: 'ellieb',
-    password: 'password',
-    database: 'finalproject'
-})
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_DATABASE,
+    port: 3306
+});
+
+connection.connect(function(err)  {    
+    if(err) throw err;
+    console.log(`Database Connected!`);      
+});
 
 export const Query = (query: string, values?: Array<string | number>) =>{
     return new Promise<Array<any>>((resolve, reject) => {

@@ -7,8 +7,7 @@ let Footer = () =>
     return (
         <>
             <footer>
-                <div className="row">Halp!</div>
-                {/* <div className="row">
+                <div className="row-fluid">
                     <div className="container d-flex justify-content-center">
                         <div className="footCall">
                             <h1>You're Still Here!</h1>
@@ -21,8 +20,8 @@ let Footer = () =>
                             <img src="/images/footCall.png" alt="image" />
                         </div>
                     </div>
-                </div> */}
-                {/* <div className="row footBg pt-2">
+                </div>
+                <div className="row-fluid footBg pt-2">
                     <div className="container">
                         <div className="row">
                             <div className="col mt-2">
@@ -103,7 +102,7 @@ let Footer = () =>
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </footer>
         </>
     )
