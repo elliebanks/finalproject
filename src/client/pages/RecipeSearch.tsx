@@ -22,7 +22,7 @@ const RecipeSearch = () =>
             <div id="recipes" className="bgColor"></div>
 
             <div className="container mb-5">
-                <div className="row no-gutters">
+                <div className="row no-gutters-man">
                     <div className="container">
                         <div id="sectionTitle" className="col secTitle text-center">
                             <h1>Recipes</h1>
