@@ -1,8 +1,7 @@
 import { Query } from "./index";
 
 const getRecipe = async () =>
-  Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, ingredients.name, ingredients.amount, users.username from recipes
-  join ingredients on recipes.id = ingredients.recipeid
+  Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, users.username from recipes
   join users on users.id=recipes.userid`);
 
   const oneRecipe = async (id: any) => 

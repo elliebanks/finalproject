@@ -19,6 +19,7 @@ import SearchResults from './pages/SearchResults';
 import { library } from '@fortawesome/fontawesome-svg-core'; // import fa library
 import { fab } from '@fortawesome/free-brands-svg-icons'; // import fa brand icons
 import { fas } from '@fortawesome/free-solid-svg-icons'; // import fa solid icons
+import Contact from './pages/Contact';
 
 library.add(fab, fas); // call fa library function and include svg packages.
 
@@ -37,6 +38,8 @@ const App = (props: AppProps) => {
 				<Route exact path="/recipes" component={RecipeSearch}/>
 
 				<Route exact path="/results/:searchBy/:text" component={SearchResults}/>
+				
+				<Route exact path="/contact" component={Contact} />
 			</Switch>	
 			
 
