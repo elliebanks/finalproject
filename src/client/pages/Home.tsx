@@ -61,6 +61,16 @@ const Home = () => {
             </section>
 
 
+
+                    
+                
+            {/* SEARCH BAR SECTION */}
+            <section className="row d-flex justify-content-center" id="searchBarContainer">
+                <div className="">
+                    <img className="" style={{ width: '100%', opacity: '50%' }} src="./images/food2.jpg" />
+                </div>
+                <form className="fieldset">
+                    <legend>SEARCHBAR PLACEHOLDER PlaceHolderrrr WILL GO OVER TOP OF IMAGE</legend>
                         <input className="" type="text" placeholder="Find the perfect recipe..." id="homeSearchBar" onChange={e => setText(e.target.value)}/>
                         {/* <div className="col" id="submitRecipe"> */}
 
@@ -77,16 +87,6 @@ const Home = () => {
                         </Link>
                         </button>
                         {/* <div> */}
-
-                    
-                
-            {/* SEARCH BAR SECTION */}
-            <section className="row d-flex justify-content-center" id="searchBarContainer">
-                <div className="">
-                    <img className="" style={{ width: '100%', opacity: '50%' }} src="./images/food2.jpg" />
-                </div>
-                <form className="fieldset">
-                    <legend>SEARCHBAR PLACEHOLDER PlaceHolderrrr WILL GO OVER TOP OF IMAGE</legend>
                 </form>
             </section>
 
