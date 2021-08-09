@@ -3,13 +3,16 @@ import { useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUtensils, faStopwatch } from '@fortawesome/free-solid-svg-icons';
 
+
 const SearchResults: React.FC = () => {
 const { text, searchBy }: {text: string, searchBy: string} = useParams()
 
 const [ recipes, setRecipes ] = useState([])
 
 useEffect(() => {
-  console.log("useeffect ")
+
+    
+  
         // console.log(searchBy, text)
         // if(searchBy == "user"){
         //     fetch(`/api/recipes/search-user/${text}`)
@@ -18,8 +21,10 @@ useEffect(() => {
         // } else if (searchBy == "ingredient"){
         
         fetch(`/api/recipes/search-ing/${text}`)
-        .then(res => console.log(res))
-        // .then(recipes => console.log(recipes))
+        .then(res => res.json())
+        .then(recipes => setRecipes(recipes))
+       console.log(recipes);
+       
     
    
 
@@ -31,8 +36,8 @@ return (
     <h1>Searching by {searchBy} for "{text}"</h1>
 
     {recipes.map(recipe => (
-                        <div className="col-4 bg-info" id="recipeCard" key={recipe.id}>
-                            <div className="recipeCardWrap">
+                        <div className="col-2 bg-info"  key={recipe.id}>
+                            <div className="recipeWrap">
                                 <img src={`${recipe.imagelink}`} className="card-img-top" alt="{recipe.title}" />
                                 <div className="card-body mb-1">
                                     <h4>{recipe.title}</h4>

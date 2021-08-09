@@ -54,7 +54,7 @@ const postIngredients = async (name, amount, recipeid) =>
 
 const postComments = async (comment, recipeid) => Query(`insert into comments(comment, recipeid) values(?,?)`, [comment, recipeid]);
 
-const searchRecipesByIngredient = async (ingname: string) => Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, ingredients.name, ingredients.amount, users.username from recipes
+const searchRecipesByIngredient = async (ingname: string) => Query(`select recipes.*, ingredients.name,  users.username from recipes
 join ingredients on recipes.id = ingredients.recipeid
 join users on users.id=recipes.userid
 where ingredients.name = ?`,[ingname])
