@@ -96,7 +96,6 @@ const Contact = () => {
                 </div>
             </form>
 
-            helloWorld
         </>
 
     )
