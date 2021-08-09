@@ -50,41 +50,42 @@ const Contact = () => {
             <form>
                 <div className="col">
                     <div className="form-group">
-                        <label>First Name  </label>
-                        <input type="text" className="" />
+                        
+                        <input type="text" placeholder="First Name" className="" />
                     </div>
 
                     <div className="form-group">
-                        <label>Last Name  </label>
-                        <input type="text" className="" />
+                        
+                        <input type="text" placeholder="Last Name" className="" />
                     </div>
                 </div>
                 <div className="col">
                     <div className="form-group">
-                        <label>Email Address </label>
-                        <input type="email" className="" />
+                        
+                        <input type="email" placeholder="Email Address" className="" />
                     </div>
                     <div className="form-group">
-                        <label>Phone Number  </label>
-                        <input type="tel" id="phone" className="" />
+                        
+                        <input type="tel" id="phone" placeholder="Phone Number" className="" />
                     </div>
                 </div>
 
                 <div className="col">
                     <div className="form-group">
-                        <label>Message Subject  </label>
-                        <input type="text" className="" />
+                        
+                        <input type="text" placeholder="Message Subject" className="" />
                     </div>
 
                     <div className="form-group">
-                        <label>Company Name  </label>
-                        <input type="text" className="" />
+                        
+                        <input type="text" placeholder="Company Name" className="" />
                     </div>
                 </div>
                 <div className="col">
                     <div className="form-group">
-                        <label>Message:  </label>
-                        <textarea>
+                        
+                        <textarea placeholder="Message">
+                            
                         </textarea>
                     </div>
                 </div>

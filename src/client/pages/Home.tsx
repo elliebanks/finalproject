@@ -44,7 +44,7 @@ const Home = () => {
                                     Want to share those delicious recipes you've been experimenting?
                                     <br />Is it lunch time yet? <em>Bon appétit!</em></p>
                                 <p className="mt-20">
-                                    <a href="#" className="btn btn-dark btn-square hover-effect">Share a Recipe! </a>
+                                    <a href="/recipes" className="btn btn-dark btn-square hover-effect">Share a Recipe! </a>
                                 </p>
                             </div>
                         </div>
