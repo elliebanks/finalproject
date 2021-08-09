@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
 import "../scss/home.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUtensils, faStopwatch } from '@fortawesome/free-solid-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -47,7 +47,7 @@ const Home = () => {
                                     Want to share those delicious recipes you've been experimenting?
                                     <br />Is it lunch time yet? <em>Bon appétit!</em></p>
                                 <p className="mt-20">
-                                    <a href="/recipes" className="btn btn-dark btn-square hover-effect">Share a Recipe! </a>
+                                    <a href="/recipes" id="shareRecipeBtn" className="btn btn-dark btn-square hover-effect">Share a Recipe! </a>
                                 </p>
                             </div>
                         </div>
@@ -60,38 +60,41 @@ const Home = () => {
                 </div>
             </section>
 
+            <div className="searchBarContainer">
+           
+                <i className="" id="searchIcon"><FontAwesomeIcon icon={faSearch} /> </i>
+                <input className="input-field" type="text" placeholder=" Find the perfect recipe..." id="homeSearchBar" onChange={e => setText(e.target.value)} />
+       
+                <div className="searchByContainer">
+                    <label htmlFor="select">Search by:</label>
+                    <select onChange={e => setSearchBy(e.target.value)}>
+                        <option value="recipe">recipe</option>
+                        <option value="ingredient">ingredient</option>
+                        <option value="user">user</option>
+                    </select>
 
-                        <input className="" type="text" placeholder="Find the perfect recipe..." id="homeSearchBar" onChange={e => setText(e.target.value)}/>
-                        {/* <div className="col" id="submitRecipe"> */}
 
-                        <label htmlFor="select">Search by:</label>
-                        <select onChange={e => setSearchBy(e.target.value)}>
-                            <option value="recipe">recipe</option>
-                            <option value="ingredient">ingredient</option>
-                            <option value="user">user</option>
-                        </select>
-
-                        <button type="button" id="submitButton">
+                    <button type="button" className="btn btn-dark btn-square hover-effect text-muted" id="submitButton">
                         <Link to={`/results/${searchBy}/${text}`}>
                             Search
                         </Link>
-                        </button>
-                        {/* <div> */}
-
-                    
-                
-            {/* SEARCH BAR SECTION */}
-            <section className="row d-flex justify-content-center" id="searchBarContainer">
-                <div className="">
-                    <img className="" style={{ width: '100%', opacity: '50%' }} src="./images/food2.jpg" />
+                    </button>
                 </div>
-                <form className="fieldset">
-                    <legend>SEARCHBAR PLACEHOLDER PlaceHolderrrr WILL GO OVER TOP OF IMAGE</legend>
-                </form>
+            </div>
+
+
+
+            {/* SEARCH BAR SECTION */}
+            <section className="row d-flex justify-content-center" id="bottomImage">
+                <div className="">
+                    <img className="" style={{ width: '1110px',  opacity: '50%' }} src="./images/food2.jpg" />
+
+
+                </div>
             </section>
 
 
-        
+
         </>
     );
 };
