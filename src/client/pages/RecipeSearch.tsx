@@ -32,34 +32,38 @@ const RecipeSearch = () =>
 
                     {/* component start */}
 
-                    {recipes.map(recipe => (
-                        <div className="col-4 bg-info" id="recipeCard" key={recipe.id}>
-                            <div className="recipeCardWrap">
-                                <div className="recipeCardImgWrap">
-                                    <img src={recipe.imagelink} className="recipeCardImg" alt={recipe.imagelink} />
-                                </div>
-                                <div className="card-body mb-1">
-                                    <h4>{recipe.title}</h4>
+                    <div className="container m-5">
+                        <div className="row">
+                            {recipes.map(recipe => (
+                                <div className="col-4 mb-3" id="recipeCard" key={recipe.id}>
+                                    <div className="recipeCardWrap">
+                                        <div className="recipeCardImgWrap">
+                                            <img src={recipe.imagelink} className="recipeCardImg" alt={recipe.imagelink} />
+                                        </div>
+                                        <div className="card-body mb-1">
+                                            <h4>{recipe.title}</h4>
 
-                                    <div className="" id="servingDetails">
-                                        <span className="d-flex inline">
-                                            <FontAwesomeIcon className="m-1" icon={faUtensils} />
-                                            <p className="servingSize"> Serving Size:  {recipe.servings}  </p> </span>
+                                            <div className="" id="servingDetails">
+                                                <span className="d-flex inline">
+                                                    <FontAwesomeIcon className="m-1" icon={faUtensils} />
+                                                    <p className="servingSize"> Serving Size:  {recipe.servings}  </p> </span>
+                                            </div>
+
+                                            <div className="" id="cookingTimeDetails">
+                                                <span className="d-flex inline">
+                                                    <FontAwesomeIcon className="m-1" icon={faStopwatch} />
+                                                    <p> Cooking Time:  {recipe.cooktime}</p>
+                                                </span>
+                                            </div>
+
+                                            <p className="card-text d-flex justify-content-center" id="recipeDescription">{recipe.description}</p>
+                                            <button>Link Placeholder</button>
+                                        </div>
                                     </div>
-
-                                    <div className="" id="cookingTimeDetails">
-                                        <span className="d-flex inline">
-                                            <FontAwesomeIcon className="m-1" icon={faStopwatch} />
-                                            <p> Cooking Time:  {recipe.cooktime}</p>
-                                        </span>
-                                    </div>
-
-                                    <p className="card-text d-flex justify-content-center" id="recipeDescription">{recipe.description}</p>
-                                    <button>Link Placeholder</button>
                                 </div>
-                            </div>
+                            ))};
                         </div>
-                    ))};
+                    </div>
 
                     {/* component end */}
 

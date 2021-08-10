@@ -6,12 +6,13 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
 
-const Home = () => {
+const Home = () =>
+{
     const [text, setText] = useState('')
     const [searchBy, setSearchBy] = useState('')
     return (
         <>
-
+            <div id="backDiv" className="bgColor"></div>
             <div className="container">
                 <div>
                     <div id="carouselControls" className="carousel slide" data-bs-ride="carousel">
@@ -61,10 +62,10 @@ const Home = () => {
             </section>
 
             <div className="searchBarContainer mt-4">
-           
+
                 <i className="" id="searchIcon"><FontAwesomeIcon icon={faSearch} /> </i>
                 <input className="input-field" type="text" placeholder=" Find the perfect recipe..." id="homeSearchBar" onChange={e => setText(e.target.value)} />
-       
+
                 <div className="searchByContainer">
                     <label htmlFor="select">Search by:</label>
                     <select onChange={e => setSearchBy(e.target.value)}>
@@ -88,7 +89,7 @@ const Home = () => {
             {/* SEARCH BAR SECTION */}
             <section className="row d-flex justify-content-center m-5" id="bottomImage">
                 <div className="">
-                    <img className="" style={{ width: '1110px',  opacity: '50%' }} src="./images/food2.jpg" />
+                    <img className="" style={{ width: '1110px', opacity: '50%' }} src="./images/food2.jpg" />
 
 
                 </div>
