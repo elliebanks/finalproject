@@ -13,6 +13,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import RecipeSearch from './pages/RecipeSearch';
+import SearchResults from './pages/SearchResults';
 
 import Footer from './components/Footer';
 
@@ -43,6 +44,8 @@ const App = (props: AppProps) => {
 					<SingleRecipe/>
 				</Route>
 
+				<Route exact path="/results/:searchBy/:text" component={SearchResults}/>
+				
 				<Route exact path="/contact" component={Contact} />
 			</Switch>	
 			

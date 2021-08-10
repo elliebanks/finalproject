@@ -1,11 +1,16 @@
 import React from 'react'
 import '../scss/contact.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhoneAlt, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import { faFacebookSquare, faTwitter, faInstagram, } from '@fortawesome/free-brands-svg-icons';
+
 // import { useState } from 'react';
 
 const Contact = () =>
 {
     return (
         <>
+<<<<<<< HEAD
             <div id="backDiv" className="bgColor"></div>
 
             <div className="container">
@@ -41,6 +46,8 @@ const Contact = () =>
 
                 </div>
             </div>
+=======
+>>>>>>> e0b7c6dcbbc1eb7e6a50671b2a193747ac4927d8
 
             <div className="container mt-5 d-flex justify-content-center">
                 <br />
@@ -50,59 +57,84 @@ const Contact = () =>
             {/* from skratch 'contact info section' */}
             <div id="contact-container">
                 <div className="contact-info">
-                </div>
-                <form >
                     <h4>Contact Information</h4>
-                    <p>OUR "CONTACT INFORMATION" WILL GO HERE</p>
-
-                </form>
+                    <p className="sub-title">Please fill out the form and the from.Skratch team will get back to you.</p>
+                    <div className="icon-text">
+                        <FontAwesomeIcon className="fa" icon={faPhoneAlt} />
+                        <span>205-987-2321</span>
+                    </div>
+                    <div className="icon-text">
+                        <FontAwesomeIcon className="fa" icon={faEnvelope} />
+                        <span>contact@fromskratch.com</span>
+                    </div>
+                    <div className="icon-text">
+                        <FontAwesomeIcon className="fa" icon={faMapMarkerAlt} />
+                        <span>1234 Vulcan Rd Birmingham, AL 35205</span>
+                    </div>
+                    <div className="social-media">
+                        <a href="#" className="icon-circle">
+                            <i><FontAwesomeIcon className="fa" icon={faFacebookSquare} /></i>
+                        </a>
+                        <a href="#" className="icon-circle">
+                            <i><FontAwesomeIcon className="fa" icon={faInstagram} /></i>
+                        </a>
+                        <a href="#" className="icon-circle">
+                            <i><FontAwesomeIcon className="fa" icon={faTwitter} /></i>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             {/* user contact submission form */}
-            <div className="container d-flex justify-content-center" id="contactUsForm">
-                <form action="">
-                    <div className="row">
-                        <div className="form-group">
-                            {/* <label>First Name  </label> */}
-                            <input type="text" placeholder="First Name" className="mr-3" />
-                        </div>
-                        <div className="form-group">
-                            {/* <label>Last Name  </label> */}
-                            <input type="text" placeholder="Last Name" className="mr-5" />
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="form-group">
-                            {/* <label>Email Address </label> */}
-                            <input type="email" placeholder="Email Address" className="mr-5" />
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="form-group">
-                            {/* <label>Phone Number  </label> */}
-                            <input type="tel" placeholder="Phone Number" className="mr-5" />
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="form-group">
-                            {/* <label>Message Title  </label> */}
-                            <input type="text" placeholder="Message Subject" className="mr-5" />
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="form-group">
-                            {/* <label>Message  </label> */}
-                            <textarea className=""
-                                placeholder="Write your message here...">
-                            </textarea>
-                        </div>
+            <form>
+                <div className="col">
+                    <div className="form-group">
+                        
+                        <input type="text" placeholder="First Name" className="" />
                     </div>
 
-                    <div className="row">
-                        <button type="submit">Submit</button>
+                    <div className="form-group">
+                        
+                        <input type="text" placeholder="Last Name" className="" />
                     </div>
-                </form>
-            </div>
+                </div>
+                <div className="col">
+                    <div className="form-group">
+                        
+                        <input type="email" placeholder="Email Address" className="" />
+                    </div>
+                    <div className="form-group">
+                        
+                        <input type="tel" id="phone" placeholder="Phone Number" className="" />
+                    </div>
+                </div>
+
+                <div className="col">
+                    <div className="form-group">
+                        
+                        <input type="text" placeholder="Message Subject" className="" />
+                    </div>
+
+                    <div className="form-group">
+                        
+                        <input type="text" placeholder="Company Name" className="" />
+                    </div>
+                </div>
+                <div className="col">
+                    <div className="form-group">
+                        
+                        <textarea placeholder="Message">
+                            
+                        </textarea>
+                    </div>
+                </div>
+                <div className="col">
+                    <div className="form-group">
+                        <button type="submit" className="btn btn-dark btn-square hover-effect">Send Message</button>
+                    </div>
+                </div>
+            </form>
+
         </>
 
     )

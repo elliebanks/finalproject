@@ -33,6 +33,15 @@ router.get("/search-ing/:ingname", async (req, res) => {
     res.sendStatus(500);
   }
 });
+router.get("/search-recipetitle/:title", async (req, res) => {
+  try {
+    const recipesByTitle = await db.Recipes.searchRecipesByTitle(req.params.title);
+    res.json(recipesByTitle);
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
 
 router.get("/:id", async (req, res) => {
   try {
@@ -59,7 +68,15 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-
+router.get("/", async (req, res) => {
+  try {
+    const recipes = await db.Recipes.getRecipe();
+    res.json(recipes);
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
 
 router.post("/:id?", async (req, res) => {
   if (req.params.id) {
@@ -96,6 +113,8 @@ router.post("/:id?", async (req, res) => {
     }
   }
 });
+
+
 
 // router.post('/:id', async(req, res) => {
 

@@ -1,6 +1,7 @@
 import { Query } from "./index";
 
 const getRecipe = async () =>
+<<<<<<< HEAD
   Query(`
   SELECT DISTINCT
     recipes.id,
@@ -18,6 +19,10 @@ const getRecipe = async () =>
         INNER JOIN
     users ON users.id = recipes.userid;
   `);
+=======
+  Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, users.username from recipes
+  join users on users.id=recipes.userid`);
+>>>>>>> e0b7c6dcbbc1eb7e6a50671b2a193747ac4927d8
 
 const oneRecipe = async (id: any) =>
   Query(
@@ -69,15 +74,24 @@ const postIngredients = async (name, amount, recipeid) =>
 
 const postComments = async (comment, recipeid) => Query(`insert into comments(comment, recipeid) values(?,?)`, [comment, recipeid]);
 
-const searchRecipesByIngredient = async (ingname: string) => Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, ingredients.name, ingredients.amount, users.username from recipes
+const searchRecipesByIngredient = async (ingname: string) => Query(`select recipes.*, ingredients.name,  users.username from recipes
 join ingredients on recipes.id = ingredients.recipeid
 join users on users.id=recipes.userid
 where ingredients.name = ?`, [ingname])
 
-const searchRecipesByUsername = async (username: string) => Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, ingredients.name, ingredients.amount, users.username from recipes
-join ingredients on recipes.id = ingredients.recipeid
+const searchRecipesByUsername = async (username: string) => Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, users.username from recipes
+
 join users on users.id=recipes.userid
+<<<<<<< HEAD
 where users.username = ?`, [username])
+=======
+where users.username = ?`,[username])
+
+const searchRecipesByTitle = async (title: string) => Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, users.username 
+from users
+join recipes on users.id=recipes.userid
+where recipes.title = ?`,[title])
+>>>>>>> e0b7c6dcbbc1eb7e6a50671b2a193747ac4927d8
 export default {
   getRecipe,
   oneRecipe,
@@ -89,5 +103,6 @@ export default {
   postIngredients,
   postComments,
   searchRecipesByIngredient,
-  searchRecipesByUsername
+  searchRecipesByUsername,
+  searchRecipesByTitle
 };
