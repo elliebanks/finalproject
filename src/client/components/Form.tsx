@@ -9,11 +9,19 @@ const SubmitForm: React.FC = (props) => {
     const [timeUnits, setTimeUnits] = useState(null)
     const [servings, setServings] = useState('')
     const [description, setDescription] = useState('')
-    const [images, setImages] = useState('')
+    const [imagelink, setImageLink] = useState('')
+    const [directions, setDirections] = useState('')
+    const [ingredientsName, setIngredientsName] = useState('');
+    const [ingredientsAmount, setIngredientsAmount] = useState('');
+    const [ingredients, setIngredients] = useState([])
 
     let history = useHistory()
 
-  
+  const handleAddIngredient = (e) => {
+      e.preventDefault()
+      let newIngredient = {ingredientsName, ingredientsAmount}
+      setIngredients([...ingredients, newIngredient])
+  }
 
     const handleSubmit = () => {
         let recipe = {
@@ -22,7 +30,7 @@ const SubmitForm: React.FC = (props) => {
             cookTime: `${cookTime} ${timeUnits}`,
             servings: servings,
             description: description,
-            images: images
+            imagelink: imagelink
         }
 
         const reqOptions = {
@@ -36,27 +44,38 @@ const SubmitForm: React.FC = (props) => {
         history.push("/")
     }
 
+  const showIngredients = () => {
+    ingredients.map(ing => {return(
+        <div>
+        <h6>{ing.ingredientName}</h6>
+        <h6>{ing.ingredientAmount}</h6>
+        </div>
+    )})
+  }
+
+     // Set up a button that says add ingredient which will add in another set of ingredient name and amount
+
     return (
         <>
             <form className="form-card" action="formsubmissions.html" method="GET">
                 <div>
                     <label>
                         Title
-                        <input type="text" name="Title" onChange={e => setTitle(e.target.value)} />
+                        <input value={title} placeholder="ex. Mom's Chicken Fingers" type="text" name="Title" onChange={e => setTitle(e.target.value)} />
                     </label>
                 </div>
 
                 <div>
                     <label>
                         Username
-                        <input type="text" name="Username" onChange={e => setUsername(e.target.value)} />
+                        <input value={username} placeholder="ex. Daffy Duck" type="text" name="Username" onChange={e => setUsername(e.target.value)} />
                     </label>
                 </div>
 
                 <div>
                     <label>
                         Cook Time
-                        <input type="text" name="Cook Time" onChange={e => setCookTime(e.target.value)} />
+                        <input value={cookTime} placeholder="ex. 23 minutes" type="text" name="Cook Time" onChange={e => setCookTime(e.target.value)} />
                     </label>
                     <select name="Units of time" onChange={e => setTimeUnits(e.target.value)}>
                         <option value="minutes">minutes</option>
@@ -67,35 +86,43 @@ const SubmitForm: React.FC = (props) => {
                 <div>
                     <label>
                         Servings
-                        <input type="text" name="Servings" />
+                        <input value={servings} placeholder="ex. Will feed 8 people" type="text" name="Servings" onChange={e => setTitle(e.target.value)} />
                     </label>
                 </div>
 
                 <div>
                     <label>
                         Description
-                        <input type="text" name="Descriptions" />
+                        <input value={description} placeholder="ex. Mouth watering chicken with cheese stuffed inside" type="text" name="Descriptions" onChange={e => setDescription(e.target.value)}/>
+                    </label>
+                </div>
+
+                <div>
+               {showIngredients()}
+                    <label>
+                        Ingredient Name
+                        <input value={ingredientsName} placeholder="ex. eggs, bacon, flour, braed" type="text" name="Ingredients Name" onChange={e => setIngredientsName(e.target.value)}/>
                     </label>
                 </div>
 
                 <div>
                     <label>
-                        Ingredient Name
-                        <input type="text" name="Ingredients Name" />
+                        Ingredient Amount
+                        <input value={ingredientsAmount} type="text" name="Ingredients Amount" onChange={e => setIngredientsAmount(e.target.value)}/>
                     </label>
                 </div>
-
+                <div> <button className="btn btn-primary rounded" onClick={handleAddIngredient}>Add ingredient</button></div>
                 <div>
                     <label>
                         Directions
-                        <input name="Directions" />
+                        <input value={directions} placeholder="ex. Step 1: add water to the pot, Step 2: boil the water" name="Directions" onChange={e => setTitle(e.target.value)}/>
                     </label>
                 </div>
 
                 <div>
                     <label>
-                        Images
-                    <input name="Images" />
+                        Imagelink
+                    <input value={title} placeholder="ex." name="ImageLink" onChange={e => setImageLink(e.target.value)}/>
                     </label>
                 </div>
                 <button type="reset">Reset</button>
