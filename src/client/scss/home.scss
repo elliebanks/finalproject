@@ -12,7 +12,12 @@ home.body {
 #shareRecipeBtn {
             font-size: 1.2rem;
             margin: 10px;         
-            border: none; 
+            border: none;
+             
+}
+
+button:hover {         
+    background:#31cc7f !important;
 }
 
 .searchBarContainer{
@@ -63,6 +68,9 @@ a {
         
         } 
 #bottomImage{
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
     margin: 2rem 0 2rem 0;
 }   
 

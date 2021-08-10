@@ -13,24 +13,21 @@ const Home = () => {
         <>
 
             <div className="container">
-                <div>
-                    <div id="carouselControls" className="carousel slide" data-bs-ride="carousel">
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
-                                <img src="./images/food1.jpg" className="d-block w-100" alt="..." />
-                            </div>
-                            <div className="carousel-item item">
-                                <img src="./images/food2.jpg" className="d-block w-100" alt="..." />
-                            </div>
-                            <div className="carousel-item item">
-                                <img src="./images/food3.jpg" className="d-block w-100" alt="..." />
-                            </div>
-                            <div className="carousel-item item">
-                                <img src="./images/foodimage.png" className="d-block w-100" alt="..." />
-                            </div>
+
+                <div id="carouselControls" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-inner">
+                        <div className="carousel-item active">
+                            <img src="./images/food1.jpg" className="d-block w-100" alt="..." />
+                        </div>
+                        <div className="carousel-item item">
+                            <img src="./images/food3.jpg" className="d-block w-100" alt="..." />
+                        </div>
+                        <div className="carousel-item item">
+                            <img src="./images/foodimage.png" className="d-block w-100" alt="..." />
                         </div>
                     </div>
                 </div>
+
             </div>
 
             {/* MAIN HOME SECTION */}
@@ -47,7 +44,7 @@ const Home = () => {
                                     Want to share those delicious recipes you've been experimenting?
                                     <br />Is it lunch time yet? <em>Bon appétit!</em></p>
                                 <p className="mt-20">
-                                    <a href="/recipes" id="shareRecipeBtn" className="btn btn-dark btn-square hover-effect">Share a Recipe! </a>
+                                    <a href="/recipes"><button className="btn btn-dark btn-square" id="shareRecipeBtn">Share a Recipe!</button> </a>
                                 </p>
                             </div>
                         </div>
@@ -61,10 +58,10 @@ const Home = () => {
             </section>
 
             <div className="searchBarContainer mt-4">
-           
+
                 <i className="" id="searchIcon"><FontAwesomeIcon icon={faSearch} /> </i>
                 <input className="input-field" type="text" placeholder=" Find the perfect recipe..." id="homeSearchBar" onChange={e => setText(e.target.value)} />
-       
+
                 <div className="searchByContainer">
                     <label htmlFor="select">Search by:</label>
                     <select onChange={e => setSearchBy(e.target.value)}>
@@ -75,7 +72,7 @@ const Home = () => {
                     </select>
 
 
-                    <button type="button" className="btn btn-dark btn-square hover-effect text-muted" id="submitButton">
+                    <button type="button" className="btn btn-dark btn-square text-muted" id="submitButton">
                         <Link to={`/results/${searchBy}/${text}`}>
                             Search
                         </Link>
@@ -86,12 +83,8 @@ const Home = () => {
 
 
             {/* SEARCH BAR SECTION */}
-            <section className="row d-flex justify-content-center m-5" id="bottomImage">
-                <div className="">
-                    <img className="" style={{ width: '1110px',  opacity: '50%' }} src="./images/food2.jpg" />
-
-
-                </div>
+            <section className="row m-5" id="bottomImage">
+                <img className="" style={{ width: '1110px', opacity: '50%' }} src="./images/food2.jpg" />
             </section>
 
 
