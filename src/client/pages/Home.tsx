@@ -68,6 +68,7 @@ const Home = () => {
                 <div className="searchByContainer">
                     <label htmlFor="select">Search by:</label>
                     <select onChange={e => setSearchBy(e.target.value)}>
+                        <option value="select"></option>
                         <option value="title">title</option>
                         <option value="ingredient">ingredient</option>
                         <option value="user">user</option>
