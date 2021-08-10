@@ -17,9 +17,21 @@ $theme-colors: (
 /* SiteWide Stles */
 body {      font-family: 'Montserrat', sans-serif;}
 
+/* SiteWide Logo */
+span.from {             font-family: 'Montserrat', sans-serif; letter-spacing: -1px; font-weight: 900;}
+span.skratch {          font-family: 'Mrs Sheppards', sans-serif; font-weight: 300;}
+h3 span.from {          color: #31cc7f;}
+h6 span.from {          font-size: 10px;}
+h3 span.skratch {           font-size: 36px; color: #31cc7f;}
+h6 span.skratch {           font-size: 15px;}
+p span.from {               color: #31cc7f;}
+p span.skratch {            font-size: 24px; line-height: 24px; color: #31cc7f;}
+
+/* Theme SCSS */
 div.leftColumn {        padding: 15px 40px 15px 0; margin: 0;}
 div.rightColumn {       padding: 0; margin: 0;}
-div.secTitle {          margin: 0 0 30px;}
+div.secHeadTitle {      margin: 0 0 45px;}
+div.secTitle {          padding: 0; margin: 0 0 20px;}
 div.secContent {        display: block;}
 div.secConHead {        width: 100%; display: block;}
 div.secConHead img {    width: 100%; object-fit: cover;}

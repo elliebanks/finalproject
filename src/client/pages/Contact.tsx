@@ -6,7 +6,8 @@ import { faFacebookSquare, faTwitter, faInstagram, } from '@fortawesome/free-bra
 
 // import { useState } from 'react';
 
-const Contact = () => {
+const Contact = () =>
+{
     return (
         <>
 

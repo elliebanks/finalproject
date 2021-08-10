@@ -4,13 +4,6 @@ const About = () =>
 {
     return (
         <>
-            {/* <div>
-                <p className="display-5 ">About Us</p>
-            </div> */}
-            {/* <div className="container mb-3">
-                <img src="/images/about2.jpg" className="img-fluid" alt="from-skratch-logo" id="aboutPageLogo" />
-            </div> */}
-
             <div id="backDiv" className="bgColor"></div>
 
             <div className="container">
@@ -18,18 +11,18 @@ const About = () =>
                     {/* Left-Column */}
                     <div className="col-8 leftColumn">
                         <section>
-                            <div id="sectionTitle" className="secTitle">
+                            <div id="sectionTitle" className="secHeadTitle">
                                 <h1>About Us</h1>
-                                <h6>About from.skratch and the development team.</h6>
+                                <h6>About <span className="from">from.</span><span className="skratch">skratch</span> and the development team.</h6>
                             </div>
                             <div className="secContent">
                                 <h3>
-                                    Hi! We are the "from.Skratch" Team
+                                    Hi! We are the <span className="from">from.</span><span className="skratch">skratch</span> Team
                                 </h3>
                                 <p>
                                     We are a group of 5 web-developers who wanted to create a community for our love of good FOOD.
                                     Don't you hate the days when you are searching through your pantry and just don't know what to make?
-                                    So do we! From.Skratch is here to help you make those decisions, while making it as easy as possible in the process.
+                                    So do we! <span className="from">from.</span><span className="skratch">skratch</span> is here to help you make those decisions, while making it as easy as possible in the process.
                                 </p>
                                 <p>
                                     Whether you've got some ingredients you aren't sure what to do with or maybe you are a beginner looking for some tasty new recipe ideas...From.Skratch has your back!
@@ -47,7 +40,7 @@ const About = () =>
                     {/* Right-Column */}
                     <div className="col-4 rightColumn">
                         <div className="secConHead">
-                            <img className="aboutHeadImg" src="/images/aboutHead.jpg" alt="image" />
+                            <img className="aboutHeadImg" src="/images/baking.gif" alt="image" />
                         </div>
                     </div>
 
@@ -57,46 +50,61 @@ const About = () =>
             <div className="container aboutTeam">
                 <div className="row">
                     <div id="sectionTitle" className="col secTitle">
-                        <h1>About Us</h1>
-                        <h6>About from.skratch and the development team.</h6>
+                        <h1>About Our Team</h1>
+                        <h6>About <span className="from">from.</span><span className="skratch">skratch</span> and the development team.</h6>
                     </div>
                     <div className="card-columns">
                         <div className="card">
-                            <img className="card-img-top" src=".../100px160/" alt="Card image cap" />
+                            <div className="card-container" style={{ backgroundImage: `url("http://localhost:3000/images/aboutHead.jpg")` }}>
+                                <img className="card-img" src="/images/briana.jpg" alt="Briana Jenkins" />
+                            </div>
                             <div className="card-body">
-                                <h3 className="card-title">Briana</h3>
+                                <h3 className="card-title">Jenkins, Briana</h3>
+                                <h6>Full-Stack Development</h6>
                                 <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
 
                         <div className="card">
-                            <img className="card-img-top" src=".../100px160/" alt="Card image cap" />
+                            <div className="card-container" style={{ backgroundImage: `url("http://localhost:3000/images/aboutHead.jpg")` }}>
+                                <img className="card-img" src="/images/ellie.png" alt="Ellie Banks" />
+                            </div>
                             <div className="card-body">
-                                <h3 className="card-title">Moshe</h3>
+                                <h3 className="card-title">Banks, Ellie</h3>
+                                <h6>Full-Stack Development</h6>
                                 <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
 
                         <div className="card">
-                            <img className="card-img-top" src=".../100px160/" alt="Card image cap" />
+                            <div className="card-container" style={{ backgroundImage: `url("http://localhost:3000/images/aboutHead.jpg")` }}>
+                                <img className="card-img" src="/images/moshe.jpg" alt="Moshe Rube" />
+                            </div>
                             <div className="card-body">
-                                <h3 className="card-title">Justin</h3>
+                                <h3 className="card-title">Rube, Moshe</h3>
+                                <h6>Full-Stack Development</h6>
                                 <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
 
                         <div className="card">
-                            <img className="card-img-top" src="/images/ellie.png" alt="Card image cap" />
+                            <div className="card-container" style={{ backgroundImage: `url("http://localhost:3000/images/aboutHead.jpg")` }}>
+                                <img className="card-img" src="/images/justin.jpg" alt="Justin Rush" />
+                            </div>
                             <div className="card-body">
-                                <h3 className="card-title">Ellie</h3>
+                                <h3 className="card-title">Rush, Justin</h3>
+                                <h6>Full-Stack Development</h6>
                                 <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
 
                         <div className="card">
-                            <img className="card-img-top" src="/images/marques.jpg" alt="Card image cap" />
+                            <div className="card-container" style={{ backgroundImage: `url("http://localhost:3000/images/aboutHead.jpg")` }}>
+                                <img className="card-img" src="/images/marques.jpg" alt="Marques Bradley" />
+                            </div>
                             <div className="card-body">
-                                <h3 className="card-title">Marques</h3>
+                                <h3 className="card-title">Bradley, Marques</h3>
+                                <h6>Full-Stack Development</h6>
                                 <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>

@@ -35,7 +35,9 @@ const RecipeSearch = () =>
                     {recipes.map(recipe => (
                         <div className="col-4 bg-info" id="recipeCard" key={recipe.id}>
                             <div className="recipeCardWrap">
-                                <img src="https://diestelturkey.com/wp-content/uploads/2019/04/DFR-Italian-Hot-Turkey-Sausage-Link-lifestyle-600x600.jpg" className="card-img-top" alt="{recipe.title}" />
+                                <div className="recipeCardImgWrap">
+                                    <img src={recipe.imagelink} className="recipeCardImg" alt={recipe.imagelink} />
+                                </div>
                                 <div className="card-body mb-1">
                                     <h4>{recipe.title}</h4>
 
@@ -44,6 +46,7 @@ const RecipeSearch = () =>
                                             <FontAwesomeIcon className="m-1" icon={faUtensils} />
                                             <p className="servingSize"> Serving Size:  {recipe.servings}  </p> </span>
                                     </div>
+
                                     <div className="" id="cookingTimeDetails">
                                         <span className="d-flex inline">
                                             <FontAwesomeIcon className="m-1" icon={faStopwatch} />
