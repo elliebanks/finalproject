@@ -33,6 +33,15 @@ router.get("/search-ing/:ingname", async (req, res) => {
     res.sendStatus(500);
   }
 });
+router.get("/search-recipetitle/:title", async (req, res) => {
+  try {
+    const recipesByTitle = await db.Recipes.searchRecipesByTitle(req.params.title);
+    res.json(recipesByTitle);
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
 
 router.get("/:id", async (req, res) => {
   try {

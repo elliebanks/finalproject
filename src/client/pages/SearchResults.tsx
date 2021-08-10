@@ -13,23 +13,23 @@ useEffect(() => {
 
     
   
-        // console.log(searchBy, text)
-        // if(searchBy == "user"){
-        //     fetch(`/api/recipes/search-user/${text}`)
-        //     .then(res => res.json())
-        //     .then(recipes => console.log(recipes))
-        // } else if (searchBy == "ingredient"){
+        
+        if(searchBy == "user"){
+            fetch(`/api/recipes/search-user/${text}`)
+            .then(res => res.json())
+            .then(recipes => setRecipes(recipes))
+        } else if (searchBy == "ingredient"){
         
         fetch(`/api/recipes/search-ing/${text}`)
         .then(res => res.json())
         .then(recipes => setRecipes(recipes))
-       console.log(recipes);
-       
-    
-   
-
-    
-}, [])
+     } else if (searchBy == "title"){
+        console.log('Hey');
+        
+        fetch(`/api/recipes/search-recipetitle/${text}`)
+        .then(res => res.json())
+        .then(recipes => setRecipes(recipes))
+    }},[])
 
 return (
     <>

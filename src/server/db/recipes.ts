@@ -59,10 +59,15 @@ join ingredients on recipes.id = ingredients.recipeid
 join users on users.id=recipes.userid
 where ingredients.name = ?`,[ingname])
 
-const searchRecipesByUsername = async (username: string) => Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, ingredients.name, ingredients.amount, users.username from recipes
-join ingredients on recipes.id = ingredients.recipeid
+const searchRecipesByUsername = async (username: string) => Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, users.username from recipes
+
 join users on users.id=recipes.userid
 where users.username = ?`,[username])
+
+const searchRecipesByTitle = async (title: string) => Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, users.username 
+from users
+join recipes on users.id=recipes.userid
+where recipes.title = ?`,[title])
 export default {
   getRecipe,
   oneRecipe,
@@ -74,5 +79,6 @@ export default {
   postIngredients,
   postComments,
   searchRecipesByIngredient,
-  searchRecipesByUsername
+  searchRecipesByUsername,
+  searchRecipesByTitle
 };
