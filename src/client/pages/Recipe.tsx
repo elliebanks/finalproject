@@ -30,7 +30,7 @@ const SingleRecipe: React.FC<RecipeProps> = (props) =>
     return (
 
         <>
-            {/* <div id="backDiv" className="bgColor"></div>
+            <div id="backDiv" className="bgColor"></div>
 
             <div className="container">
                 <div className="row">
@@ -42,7 +42,7 @@ const SingleRecipe: React.FC<RecipeProps> = (props) =>
                     </div>
 
                 </div>
-            </div> */}
+            </div>
         </>
     )
 }

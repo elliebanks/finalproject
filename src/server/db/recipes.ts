@@ -1,28 +1,8 @@
 import { Query } from "./index";
 
 const getRecipe = async () =>
-<<<<<<< HEAD
-  Query(`
-  SELECT DISTINCT
-    recipes.id,
-    recipes.title,
-    recipes.directions,
-    recipes.description,
-    recipes.cooktime,
-    recipes.servings,
-    recipes.imagelink,
-    users.username
-  FROM
-    recipes
-        INNER JOIN
-    ingredients ON recipes.id = ingredients.recipeid
-        INNER JOIN
-    users ON users.id = recipes.userid;
-  `);
-=======
   Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, users.username from recipes
   join users on users.id=recipes.userid`);
->>>>>>> e0b7c6dcbbc1eb7e6a50671b2a193747ac4927d8
 
 const oneRecipe = async (id: any) =>
   Query(
@@ -82,16 +62,12 @@ where ingredients.name = ?`, [ingname])
 const searchRecipesByUsername = async (username: string) => Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, users.username from recipes
 
 join users on users.id=recipes.userid
-<<<<<<< HEAD
-where users.username = ?`, [username])
-=======
 where users.username = ?`,[username])
 
 const searchRecipesByTitle = async (title: string) => Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, users.username 
 from users
 join recipes on users.id=recipes.userid
 where recipes.title = ?`,[title])
->>>>>>> e0b7c6dcbbc1eb7e6a50671b2a193747ac4927d8
 export default {
   getRecipe,
   oneRecipe,
