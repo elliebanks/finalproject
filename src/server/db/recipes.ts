@@ -1,23 +1,37 @@
 import { Query } from "./index";
 
 const getRecipe = async () =>
-  Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, ingredients.name, ingredients.amount, users.username from recipes
-  join ingredients on recipes.id = ingredients.recipeid
-  join users on users.id=recipes.userid`);
+  Query(`
+  SELECT DISTINCT
+    recipes.id,
+    recipes.title,
+    recipes.directions,
+    recipes.description,
+    recipes.cooktime,
+    recipes.servings,
+    recipes.imagelink,
+    users.username
+  FROM
+    recipes
+        INNER JOIN
+    ingredients ON recipes.id = ingredients.recipeid
+        INNER JOIN
+    users ON users.id = recipes.userid;
+  `);
 
-  const oneRecipe = async (id: any) => 
+const oneRecipe = async (id: any) =>
   Query(
     `SELECT * FROM  recipes WHERE recipes.id = ?`, [id]
   )
 
-  const oneUser = async(id:any) => Query( `SELECT * FROM  users WHERE users.id = ?`, [id])
+const oneUser = async (id: any) => Query(`SELECT * FROM  users WHERE users.id = ?`, [id])
 
-  const oneIngredient = async(id:any) => Query( `SELECT * FROM  ingredients WHERE ingredients.recipeid = ?`, [id])
+const oneIngredient = async (id: any) => Query(`SELECT * FROM  ingredients WHERE ingredients.recipeid = ?`, [id])
 
-  const oneComments = async(id:any) => Query( `SELECT * FROM  comments WHERE comments.recipeid = ?`, [id])
+const oneComments = async (id: any) => Query(`SELECT * FROM  comments WHERE comments.recipeid = ?`, [id])
 
 
-  
+
 
 // const oneRecipe = async (id: any) =>
 //   Query(
@@ -58,12 +72,12 @@ const postComments = async (comment, recipeid) => Query(`insert into comments(co
 const searchRecipesByIngredient = async (ingname: string) => Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, ingredients.name, ingredients.amount, users.username from recipes
 join ingredients on recipes.id = ingredients.recipeid
 join users on users.id=recipes.userid
-where ingredients.name = ?`,[ingname])
+where ingredients.name = ?`, [ingname])
 
 const searchRecipesByUsername = async (username: string) => Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, ingredients.name, ingredients.amount, users.username from recipes
 join ingredients on recipes.id = ingredients.recipeid
 join users on users.id=recipes.userid
-where users.username = ?`,[username])
+where users.username = ?`, [username])
 export default {
   getRecipe,
   oneRecipe,

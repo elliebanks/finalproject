@@ -3,13 +3,13 @@
 ================================================== */
 // Logo Styles
 div.logo {              display: inline-block; margin: 5px 0;}
-div.logo span {         color: #31cc7f;}
-div.logo a {            text-decoration: none; color: #135a28;}
+div.logo span {         color: #fff;}
+div.logo a {            text-decoration: none; color: #196640;}
 
 // NavMenu Styles
-nav {                   height: 60px; width: 100%; margin: 0 0 10px; display: relative;}
+nav {                   height: 60px; width: 100%; margin: 0; display: relative;}
 ul.nav {                display: block; float: right; margin: 10px 0 0;}
-ul.nav li {             display: inline-block; padding: 10px; margin: 0 15px 0 0; border-bottom: 1px solid transparent;}
+ul.nav li {             display: inline-block; padding: 3px 10px; margin: 5px 15px 2px 0;}
 ul.nav li:last-child {      margin: 0;}
 ul.nav li a {           text-decoration: none; color: #000;}
 ul.log-user {           display: block; float: right; padding: 10px; margin: 20px 40px 23px;}
@@ -29,28 +29,28 @@ div.logo a {        font-family: 'Montserrat', sans-serif; letter-spacing: -1px;
 span.logo {         font-family: 'Mrs Sheppards', sans-serif; font-size: 30px; font-weight: 300;}
 
 // NavMenu Typography
-ul.nav li a {       font-size: 15px; font-weight: 600;}
+ul.nav li a {       font-size: 14px; font-weight: 600;}
 
 /* Hover & Transition Styles
 ================================================== */
 // Hovers
-ul.nav li:hover {           border-bottom: 1px solid rgb(000, 000, 000);}
-
+ul.nav li:hover {           background-color: #196640;}
+ul.nav li:hover a {         color: #fff;}
 // Transitions
-ul.nav li {			        transition: all 300ms linear; -moz-transition: all 300ms linear; -webkit-transition: all 300ms linear;}
+ul.nav li, ul.nav li a {			        transition: all 300ms linear; -moz-transition: all 300ms linear; -webkit-transition: all 300ms linear;}
 
 
 /* Active Page Styles
 ================================================== */
 // Active NavBar Styles
-a.home.active {                color: #fff !important;}
-a.recipes.active {             color: #fff !important;}
-a.submit.active {              color: #fff !important;}
-a.about.active {               color: #fff !important;}
-a.contact.active {             color: #fff !important;}
+// a.home.active {                color: #fff !important;}
+// a.recipes.active {             color: #fff !important;}
+// a.submit.active {              color: #fff !important;}
+// a.about.active {               color: #fff !important;}
+// a.contact.active {             color: #fff !important;}
 
-li.home.active {                border-bottom: 1px solid #31cc7f !important; background-color: #31cc7f;}
-li.about.active {               border-bottom: 1px solid #fff !important; background-color: #f09;}
+// li.home.active {                background-color: #31cc7f;}
+// li.about.active {               background-color: #fff;}
 
 
 // li.active{         border-bottom: 1px solid #fff !important; background-color: #f09; color: #000 !important;}
