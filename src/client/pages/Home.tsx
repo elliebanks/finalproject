@@ -61,7 +61,7 @@ const Home = () => {
             </section>
 
 
-                        <input className="" type="text" placeholder="Find the perfect recipe..." id="homeSearchBar" onChange={e => setText(e.target.value)}/>
+                        <input className="col" type="text" placeholder="Find the perfect recipe..." id="homeSearchBar" onChange={e => setText(e.target.value)}/>
                         {/* <div className="col" id="submitRecipe"> */}
 
                         <label htmlFor="select">Search by:</label>
