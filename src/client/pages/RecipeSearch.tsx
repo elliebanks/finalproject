@@ -55,7 +55,7 @@ const RecipeSearch = () =>
                                     </div>
 
                                     <p className="card-text d-flex justify-content-center" id="recipeDescription">{recipe.description}</p>
-                                    <button>Link Placeholder</button>
+                                    <button className="btn btn-dark btn-square">Full Recipe</button>
                                 </div>
                             </div>
                         </div>
