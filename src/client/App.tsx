@@ -40,9 +40,8 @@ const App = (props: AppProps) => {
 			
 				<Route exact path="/recipes" component={RecipeSearch}/>
 				
-				<Route exact path="/recipes/:id">
-					<SingleRecipe/>
-				</Route>
+				<Route exact path="/recipes/:id" component={SingleRecipe}/>
+
 
 				<Route exact path="/results/:searchBy/:text" component={SearchResults}/>
 				
