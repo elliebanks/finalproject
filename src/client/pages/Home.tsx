@@ -52,7 +52,7 @@ const Home = () =>
                                     Want to share those delicious recipes you've been experimenting?
                                     <br />Is it lunch time yet? <em>Bon appétit!</em></p>
                                 <p className="mt-20">
-                                    <a href="/recipes"><button className="btn btn-dark btn-square" id="shareRecipeBtn">Share a Recipe!</button> </a>
+                                    <Link to="/submit"><button className="btn btn-dark btn-square" id="shareRecipeBtn">Share a Recipe!</button> </Link>
                                 </p>
                             </div>
                         </div>
