@@ -2,10 +2,7 @@ import React from 'react';
 
 const About = () =>
 {
-    document.documentElement.style.setProperty("--main-color", "#ffffff");
-    document.documentElement.style.setProperty("--second-color", "#ffffff");
-    document.documentElement.style.setProperty("--navtext-color", "#ffffff");
-    document.documentElement.style.setProperty("--navtextsec-color", "#31cc7f");
+    
 
     return (
         <>

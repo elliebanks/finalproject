@@ -121,7 +121,7 @@ const SubmitForm: React.FC = (props) => {
                                     <div className="form-group">
                                         <label>
                                             Description
-                                            <textarea value={description} placeholder="Pasta carbonara is one of those simple dinners we should all know how to make. It’s the perfect go-to for a busy weeknight, and it’s also a dish fit for the weekend or even to serve to guests." type="text" name="Descriptions" onChange={e => setDescription(e.target.value)} />
+                                            <textarea value={description} placeholder="Pasta carbonara is one of those simple dinners we should all know how to make. It’s the perfect go-to for a busy weeknight, and it’s also a dish fit for the weekend or even to serve to guests." name="Descriptions" onChange={e => setDescription(e.target.value)} />
                                         </label>
                                     </div>
                                 </div>
