@@ -16,6 +16,8 @@ $theme-colors: (
 
 /* SiteWide Stles */
 body {      font-family: 'Montserrat', sans-serif;}
+:root {     --main-color: #31cc7f; --second-color: #196640; --navtext-color: #000000; --navtextsec-color: #ffffff;}
+
 
 /* SiteWide Logo */
 span.from {             font-family: 'Montserrat', sans-serif; letter-spacing: -1px; font-weight: 900;}
