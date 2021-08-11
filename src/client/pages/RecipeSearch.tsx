@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUtensils, faStopwatch } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import {Link} from 'react-router-dom'
 
 const RecipeSearch = () =>
 {
@@ -61,7 +62,7 @@ const RecipeSearch = () =>
                                             </div>
 
                                             <p className="card-text d-flex justify-content-center" id="recipeDescription">{recipe.description}</p>
-                                            <button>Link Placeholder</button>
+                                            <Link to ={`recipes/${recipe.id}`} className = 'btn btn-dark btn square'>Full Recipe</Link>
                                         </div>
                                     </div>
                                 </div>
