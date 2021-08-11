@@ -8,11 +8,18 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () =>
 {
-    const [text, setText] = useState('')
-    const [searchBy, setSearchBy] = useState('')
+    const [text, setText] = useState('');
+    const [searchBy, setSearchBy] = useState('');
+
+    document.documentElement.style.setProperty("--main-color", "#31cc7f");
+    document.documentElement.style.setProperty("--second-color", "#196640");
+    document.documentElement.style.setProperty("--navtext-color", "#000000");
+    document.documentElement.style.setProperty("--navtextsec-color", "#ffffff");
+    
+
     return (
         <>
-            <div id="backDiv" className="bgColor"></div>
+            {/* <div id="backDiv" className="bgColor"></div> */}
             <div className="container">
 
                 <div id="carouselControls" className="carousel slide" data-bs-ride="carousel">
@@ -84,17 +91,8 @@ const Home = () =>
 
 
             {/* SEARCH BAR SECTION */}
-<<<<<<< HEAD
-            <section className="row d-flex justify-content-center m-5" id="bottomImage">
-                <div className="">
-                    <img className="" style={{ width: '1110px', opacity: '50%' }} src="./images/food2.jpg" />
-
-
-                </div>
-=======
             <section className="row m-5" id="bottomImage">
                 <img className="" style={{ width: '1110px', opacity: '50%' }} src="./images/food2.jpg" />
->>>>>>> main
             </section>
 
 

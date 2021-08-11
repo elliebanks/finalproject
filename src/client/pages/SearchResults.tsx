@@ -8,13 +8,14 @@ import '../scss/searchresults.scss';
 const SearchResults: React.FC = () => {
     const { text, searchBy }: { text: string, searchBy: string } = useParams()
 
-    const [recipes, setRecipes] = useState([])
+    const [recipes, setRecipes] = useState([]);
+
+    document.documentElement.style.setProperty("--main-color", "#31cc7f");
+    document.documentElement.style.setProperty("--second-color", "#196640");
+    document.documentElement.style.setProperty("--navtext-color", "#000000");
+    document.documentElement.style.setProperty("--navtextsec-color", "#ffffff");
 
     useEffect(() => {
-
-
-
-
         if (searchBy == "user") {
             fetch(`/api/recipes/search-user/${text}`)
                 .then(res => res.json())

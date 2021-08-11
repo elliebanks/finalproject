@@ -6,15 +6,19 @@ import { useEffect } from 'react';
 
 const RecipeSearch = () =>
 {
+    document.documentElement.style.setProperty("--main-color", "#31cc7f");
+    document.documentElement.style.setProperty("--second-color", "#196640");
+    document.documentElement.style.setProperty("--navtext-color", "#000000");
+    document.documentElement.style.setProperty("--navtextsec-color", "#ffffff");
 
-    const [recipes, setRecipes] = useState([]);
+    const [recipes, setRecipes] = useState([]);   
 
     useEffect(() =>
     {
         fetch('http://localhost:3000/api/recipes')
             .then(res => res.json())
             .then(recipes => setRecipes(recipes))
-    }, []);
+    }, []);    
 
     return (
 

@@ -14,8 +14,6 @@ let Navbar = () =>
     // JS split method to get the name of the path in the array.
     const splitLocation = pathname.split('/');
 
-    // className={splitLocation[1] === "" ? "home active" : ""}
-
     console.log(splitLocation);
 
     return (
