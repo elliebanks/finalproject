@@ -101,11 +101,11 @@ router.post("/:id?", async (req, res) => {
         userid
       );
       let recipeid = Recipe.insertId;
-      let Ingredients = await db.Recipes.postIngredients(
-        req.body.name,
-        req.body.amount,
+      req.body.ingredients.forEach(async (ingredient) => await db.Recipes.postIngredients(
+        ingredient.ingredientsName,
+        ingredient.ingredientsAmount,
         recipeid
-      );
+      ));
       res.sendStatus(200);
     } catch (e) {
       console.log(e);
