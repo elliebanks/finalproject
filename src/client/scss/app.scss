@@ -44,3 +44,11 @@ h6 {                    font-size: 12px; }
 section h1 {            margin: 0; padding: 0; color:#fff;}
 section h6 {            margin: 0; padding: 0; color:#fff;}
 section p {             font-size: 16px;}
+
+/* Hover & Transition Styles
+================================================== */
+// Hovers
+ul.nav li:hover {           background-color: var(--main-color);}
+ul.nav li:hover a {         color: var(--navtextsec-color);}
+// Transitions
+ul.nav li, ul.nav li a, .form .button, .form .button.clear {			        transition: all 300ms linear; -moz-transition: all 300ms linear; -webkit-transition: all 300ms linear;}
