@@ -24,19 +24,17 @@ const Contact = () =>
                                 <h3>
                                     Get in touch with the <span className="from">from.</span><span className="skratch">skratch</span> team!!
                                 </h3>
-                                <p>
-                                    We are a group of 5 web-developers who wanted to create a community for our love of good FOOD.
-                                    Don't you hate the days when you are searching through your pantry and just don't know what to make?
-                                    So do we! <span className="from">from.</span><span className="skratch">skratch</span> is here to help you make those decisions, while making it as easy as possible in the process.
+                                <p id="secContentText">
+                                    Questions, suggestions, feedback? We are ready to help. Please fill out the form below and a team member will follow up with you shortly.
+                                    You may also refer to our contact information if you need further assistance!
+                                     <span className="from ml-2">from.</span><span className="skratch mr-1">skratch</span> is here for you!
                                 </p>
                             </div>
                         </section>
                         <section>
-                            <h3>
-                                Do you have any questions or comments? Let us know!
-                            </h3>
+
                             {/* user contact submission form */}
-                            <form>
+                            <form id="userContactForm">
                                 <div className="col">
                                     <div className="form-group">
 
@@ -73,14 +71,14 @@ const Contact = () =>
                                 <div className="col">
                                     <div className="form-group">
 
-                                        <textarea placeholder="Message">
+                                        <textarea id="messageBox" placeholder="Message">
 
                                         </textarea>
                                     </div>
                                 </div>
                                 <div className="col">
                                     <div className="form-group">
-                                        <button type="submit" className="btn btn-dark btn-square hover-effect">Send Message</button>
+                                        <button type="submit" className="btn btn-dark btn-square hover-effect">Submit Form</button>
                                     </div>
                                 </div>
                             </form>
