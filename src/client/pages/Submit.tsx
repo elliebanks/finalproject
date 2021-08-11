@@ -31,6 +31,20 @@ const SubmitForm: React.FC = (props) =>
         setIngredients([...ingredients, newIngredient]);
     };
 
+    const handleClear = () => {
+      
+        setUsername('')
+        setTitle('')
+        setCookTime('')
+        setTimeUnits('minutes')
+        setServings('')
+        setDescription('')
+        setImageLink('')
+        setDirections('')
+        setIngredients([])
+        setIngredientsName('')
+        setIngredientsAmount('')
+    }
     const handleSubmit = () =>
     {
         let recipe = {
@@ -53,8 +67,9 @@ const SubmitForm: React.FC = (props) =>
         };
 
         fetch("/api/recipes", reqOptions).then((response) => response.json());
-        history.push("/");
+        history.push("/recipes");
     };
+
 
     const showIngredients = () =>
     {
@@ -228,8 +243,8 @@ const SubmitForm: React.FC = (props) =>
                                     <button
                                         className="button clear m-0"
                                         id="formSubmitBtn"
-                                        type="submit"
-                                    // onClick={() => handleSubmit()}
+                                        type="button"
+                                    onClick={() => handleClear()}
                                     >
                                         Clear Form
                                     </button>
