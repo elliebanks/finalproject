@@ -84,17 +84,8 @@ const Home = () =>
 
 
             {/* SEARCH BAR SECTION */}
-<<<<<<< HEAD
-            <section className="row d-flex justify-content-center m-5" id="bottomImage">
-                <div className="">
-                    <img className="" style={{ width: '1110px', opacity: '50%' }} src="./images/food2.jpg" />
-
-
-                </div>
-=======
             <section className="row m-5" id="bottomImage">
                 <img className="" style={{ width: '1110px', opacity: '50%' }} src="./images/food2.jpg" />
->>>>>>> main
             </section>
 
 
