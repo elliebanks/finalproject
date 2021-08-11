@@ -1,13 +1,9 @@
 
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-    // height: 100vh;
-    // width: 100%;
-    // background-size: cover;
+
+#h3 {
+    margin: 30px auto 30px auto !important;
 }
+
 
 h4 {  
     color: white; 
@@ -18,14 +14,15 @@ p.sub-title{
     font-size: 1.5rem;
 }
 #contact-container {
-    width: 1200px;
+    
     border-radius: 15px;
-    overflow: hidden;
+    margin-right: 20px !important;
     padding: 10px;
     display: flex;
-    background: white;
-    border: 1px solid white;
+    margin-top: 45px;
+    
     .contact-info {
+        box-shadow: 0.25rem 0.25rem 0rem #135a2873;
         background-color: #31cc7f;
         border-radius: 15px;
         flex: 0 1 40%;
@@ -88,14 +85,18 @@ p.sub-title{
     }
 }
 
-    form{    
+    #userContactForm{    
         display: flex;
         flex-direction: column;
-        padding: 40px;   
-        width: 45%;
-        justify-content: inline-start;
+        padding: 40px; 
+        margin-top: 40px;  
+        margin-bottom: 40px; 
+        // width: 45%;
+
+        // justify-content: inline-start;
         align-items: center;
         background: rgba(49, 204, 126, 0.938);
+        box-shadow: 0.25rem 0.25rem 0rem #135a2873;
         border-radius: 15px;             
         .col{            
             display: flex;
@@ -104,7 +105,7 @@ p.sub-title{
         }
         .form-group {
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             flex-direction: column;
             flex: 0 1 100%;
             padding-right: 40px;
@@ -134,8 +135,11 @@ p.sub-title{
                  width: 200px;
                  height: 60px;
                  cursor: pointer;
+                 border: none;
+                 outline: none;
+
              }
-             textarea{
+             #messageBox{
                 height: 200px;
              }
     }
