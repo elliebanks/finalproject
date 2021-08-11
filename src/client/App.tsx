@@ -23,6 +23,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'; // import fa brand ico
 import { fas } from '@fortawesome/free-solid-svg-icons'; // import fa solid icons
 import Contact from './pages/Contact';
 import SingleRecipe from './pages/Recipe';
+import SubmitForm from './pages/Submit';
 
 library.add(fab, fas); // call fa library function and include svg packages.
 
@@ -42,6 +43,10 @@ const App = (props: AppProps) => {
 				
 				<Route exact path="/recipes/:id" component={SingleRecipe}/>
 
+
+				<Route exact path="/submit">
+					<SubmitForm />
+				</Route>
 
 				<Route exact path="/results/:searchBy/:text" component={SearchResults}/>
 				

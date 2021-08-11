@@ -1,0 +1,149 @@
+
+#recipeSubForm{    
+    display: flex;
+    flex-direction: column;
+    padding: 40px; 
+    margin-top: 40px;  
+    margin-bottom: 40px; 
+    width: 800px;
+    background: rgba(49, 204, 126, 0.938);
+    box-shadow: 0.25rem 0.25rem 0rem #135a2873;
+    border-radius: 15px;             
+    .col{            
+        width: 400px;
+        
+        flex: 0 0 100%;
+    }
+}
+    .form-group {
+        display: flex;
+        // align-items: center;
+        
+        // flex-direction: column;
+        
+       
+    }
+            label{
+                font-size: 1.5rem;
+                color: white;
+                margin: 5px !important;
+               
+             }
+            input {
+                border: none;
+                cursor: pointer;
+                color: black;
+                padding: 10px;
+                font-size: 16px;
+                font-weight: 300;
+                outline: none;
+
+              
+                border-bottom: 2px solid #135a28;
+                // margin-bottom: 1rem;
+                
+            }
+            ::placeholder {
+                color:  rgba(0, 0, 0, 0.409);
+            }
+         
+         button {                    
+             width: 200px;
+             height: 60px;
+             cursor: pointer;
+             border: none;
+             outline: none;
+             font-size: 16px;
+
+         }
+         textarea{
+            height: 200px;
+            width: 700px;
+            // display: flex;
+            // justify-content: center;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid #135a28;
+            color: rgba(0, 0, 0, 0.128);
+            // margin-right: 10px;
+
+         }
+
+#addIng{
+    width: 200px !important;
+   
+}
+
+
+
+
+
+
+// #recipeSubForm {
+//         display: flex;
+//         flex-direction: column;
+//         padding: 40px; 
+//         margin-top: 40px;  
+//         margin-bottom: 40px;
+//         font-size: 18px; 
+//         width: 800px;
+    
+        
+//         // justify-content: center;
+//         background: rgba(49, 204, 126, 0.938);
+//         box-shadow: 0.25rem 0.25rem 0rem #135a2873;
+//         border-radius: 15px;             
+//         col{
+//             display: flex;
+//                 width: 100%;
+//                 flex: 0 0 100%;
+
+//         } 
+
+//         .form-group {
+//             flex: 0 1 100%;
+            
+//                 label{
+//                     font-size: 1.5rem;
+//                     color: white;
+                   
+//                 }
+//                 input, textarea {
+                    
+//                     border: none;
+//                     cursor: pointer;
+//                     color: black;
+                   
+//                     font-size: 1.2rem;
+//                     font-weight: 300;
+                    
+//                     border-bottom: 2px solid #135a28;
+//                     margin: 8px;
+                    
+//                     &:focus{ 
+//                         border: none;
+//                         outline: none;
+//                         border-bottom: 2px solid #135a28;
+//                     }
+//                 }
+//              }
+//              button {                    
+//                  width: 200px;
+//                  height: 60px;
+//                  cursor: pointer;
+//                  border: none;
+//                  outline: none;
+
+//              }
+//              textarea{
+//                  justify-content: center;
+//                 height: 100px;
+//                 width: 700px;
+//              }
+//     }
+
+
+
+
+
+

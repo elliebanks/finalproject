@@ -7,14 +7,14 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import recipes from '../../server/db/recipes';
 import { isConstructorDeclaration } from 'typescript';
-import RecImage from './RecImage';
-import RecBody from './RecBody';
+import RecImage from '../components/RecImage';
+import RecBody from '../components/RecBody';
 
 const SingleRecipe: React.FC<RecipeProps> = (props) =>
 {
     const { id } = useParams<{ id: string }>();
 
-    const [rec, setRecipe] = useState([{}]);
+    const [rec, setRecipe] = useState<{name: string, amount: string}[]>([]);
     // const [user, setUser] = useState([] as any[]);
 
     useEffect(() =>
@@ -36,18 +36,30 @@ const SingleRecipe: React.FC<RecipeProps> = (props) =>
                 <div className="row">
                     <div className="col-8 leftColumn">
                         <RecBody />
+                        This is where the ing map should below
+                        
                     </div>
                     <div className="col-4 rightColumn">
                         <RecImage />
                     </div>
-
+                    {rec.map((r, index) => {
+                        return (
+                            <>
+                                <h2>{r.name}</h2>
+                                <h2>{r.amount}</h2>
+                            </>
+                        )
+                    })}                    
                 </div>
             </div>
         </>
     )
 }
 
-interface RecipeProps { }
+interface RecipeProps { 
+    // name: string;
+    // amount: string;
+ }
 
 export default SingleRecipe;
 
