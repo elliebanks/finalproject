@@ -4,6 +4,12 @@ const getRecipe = async () =>
   Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, users.username from recipes
   join users on users.id=recipes.userid`);
 
+  const getRandomRecipe = async () =>
+  Query(`select recipes.id, recipes.title, recipes.directions, recipes.description, recipes.cooktime, recipes.servings, recipes.imagelink, users.username from recipes
+  join users on users.id=recipes.userid
+  order by rand()
+  limit 3`);
+
 const oneRecipe = async (id: any) =>
   Query(
     `SELECT * FROM  recipes WHERE recipes.id = ?`, [id]
@@ -80,5 +86,6 @@ export default {
   postComments,
   searchRecipesByIngredient,
   searchRecipesByUsername,
-  searchRecipesByTitle
+  searchRecipesByTitle,
+  getRandomRecipe
 };

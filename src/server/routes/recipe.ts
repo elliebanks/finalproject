@@ -14,6 +14,17 @@ router.get("/", async (req, res) => {
   }
 );
 
+router.get("/random", async (req, res) => {
+  try {
+      const recipes = await db.Recipes.getRandomRecipe();
+      res.json(recipes);
+    } catch (e) {
+      console.log(e);
+      res.sendStatus(500);
+    }
+  }
+);
+
 router.get("/search-user/:username", async (req, res) => {
   try {
     const recipesByUsername = await db.Recipes.searchRecipesByUsername(req.params.username);
