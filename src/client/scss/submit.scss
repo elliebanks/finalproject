@@ -1,146 +1,166 @@
+/* Submit Page SCSS
+================================================== */
+/* Submit (Page) SCSS */
 
-#recipeSubForm{    
-    display: flex;
-    flex-direction: column;
-    padding: 40px; 
-    margin-top: 40px;  
-    margin-bottom: 40px; 
-    width: 800px;
-    background: rgba(49, 204, 126, 0.938);
-    box-shadow: 0.25rem 0.25rem 0rem #135a2873;
-    border-radius: 15px;             
-    .col{            
-        width: 400px;
+/* Contact */
+form {							color: #fff}
+.form .group {             		width: 100%; height: auto; position: relative; display: inline-block; margin-bottom: 20px;}
+.form .addon {					width: 40px; height: 40px; text-align: center; float: left; background-color: #31cc7f;}
+.form .addon svg {              display: inline-block; font-size: 24px; line-height: 40px; text-align: center; margin: 8px 0 0;}
+.form .control { 				width: calc(100% - 40px); margin: 0; padding: 12px 0 10px 15px; display: inline-block; background-color: #cfcfcf; border:none;}
+.form .control2 { 				width: calc(50% - 120px); margin: 0; padding: 12px 0 10px 15px; display: inline-block; background-color: #cfcfcf; border:none;}
+.form .control3 { 				width: calc(57% - 40px); margin: 0; padding: 12px 0 10px 15px; display: inline-block; background-color: #cfcfcf; border:none;}
+.form .control, .form .control2, .form .control3, .form .text, .form .button { 				font-family: 'Montserrat', serif; color:#515050; font-size: 16px; line-height: 18px;}
+.form .text { 					width: calc(100% - 40px); height:150px; margin: 0; padding: 15px; border: none; background-color: #cfcfcf;}
+.form .text::placeholder {      text-align: left;}
+.form .drop { 				    width: auto; margin: 0; padding: 10px 15px 9px; border-left: 1px solid #aaa; border-top: none; border-right: none; border-bottom: none; font-family: 'Montserrat', serif; color:#515050; background-color: #cfcfcf;}
+.form ul {                      list-style: none; color: #000;}
+.form .button {                 margin: 0 0 0 10px; padding: 12px 15px 10px; font-weight: 800; display: inline-block; background-color: #31cc7f; color: #fff; border:none;}
+.button.clear {                 background-color: #ccc; font-weight: 800; color: #000;}
+.button.clear:hover {           background-color: #196640; color: #fff;}
+
+// #recipeSubForm{    
+//     display: flex;
+//     flex-direction: column;
+//     padding: 40px; 
+//     margin-top: 40px;  
+//     margin-bottom: 40px; 
+//     width: 800px;
+//     background: rgba(49, 204, 126, 0.938);
+//     box-shadow: 0.25rem 0.25rem 0rem #135a2873;
+//     border-radius: 15px;             
+//     .col{            
+//         width: 400px;
         
-        flex: 0 0 100%;
-    }
-}
-    .form-group {
-        display: flex;
-        // align-items: center;
+//         flex: 0 0 100%;
+//     }
+// }
+//     .form-group {
+//         display: flex;
+//         // align-items: center;
         
-        // flex-direction: column;
+//         // flex-direction: column;
         
        
-    }
-            label{
-                font-size: 1.5rem;
-                color: white;
-                margin: 5px !important;
+//     }
+//             label{
+//                 font-size: 1.5rem;
+//                 color: white;
+//                 margin: 5px !important;
                
-             }
-            input {
-                border: none;
-                cursor: pointer;
-                color: black;
-                padding: 10px;
-                font-size: 16px;
-                font-weight: 300;
-                outline: none;
+//              }
+//             input {
+//                 border: none;
+//                 cursor: pointer;
+//                 color: black;
+//                 padding: 10px;
+//                 font-size: 16px;
+//                 font-weight: 300;
+//                 outline: none;
 
               
-                border-bottom: 2px solid #135a28;
-                // margin-bottom: 1rem;
+//                 border-bottom: 2px solid #135a28;
+//                 // margin-bottom: 1rem;
                 
-            }
-            ::placeholder {
-                color:  rgba(0, 0, 0, 0.409);
-            }
+//             }
+//             ::placeholder {
+//                 color:  rgba(0, 0, 0, 0.409);
+//             }
          
-         button {                    
-             width: 200px;
-             height: 60px;
-             cursor: pointer;
-             border: none;
-             outline: none;
-             font-size: 16px;
+//          button {                    
+//              width: 200px;
+//              height: 60px;
+//              cursor: pointer;
+//              border: none;
+//              outline: none;
+//              font-size: 16px;
 
-         }
-         textarea{
-            height: 200px;
-            width: 700px;
-            // display: flex;
-            // justify-content: center;
-            border: none;
-            outline: none;
-            border-bottom: 2px solid #135a28;
-            color: rgba(0, 0, 0, 0.128);
-            // margin-right: 10px;
+//          }
+//          textarea{
+//             height: 200px;
+//             width: 700px;
+//             // display: flex;
+//             // justify-content: center;
+//             border: none;
+//             outline: none;
+//             border-bottom: 2px solid #135a28;
+//             color: rgba(0, 0, 0, 0.128);
+//             // margin-right: 10px;
 
-         }
+//          }
 
-#addIng{
-    width: 200px !important;
+// #addIng{
+//     width: 200px !important;
    
-}
+// }
 
 
 
 
 
 
-// #recipeSubForm {
-//         display: flex;
-//         flex-direction: column;
-//         padding: 40px; 
-//         margin-top: 40px;  
-//         margin-bottom: 40px;
-//         font-size: 18px; 
-//         width: 800px;
+// // #recipeSubForm {
+// //         display: flex;
+// //         flex-direction: column;
+// //         padding: 40px; 
+// //         margin-top: 40px;  
+// //         margin-bottom: 40px;
+// //         font-size: 18px; 
+// //         width: 800px;
     
         
-//         // justify-content: center;
-//         background: rgba(49, 204, 126, 0.938);
-//         box-shadow: 0.25rem 0.25rem 0rem #135a2873;
-//         border-radius: 15px;             
-//         col{
-//             display: flex;
-//                 width: 100%;
-//                 flex: 0 0 100%;
+// //         // justify-content: center;
+// //         background: rgba(49, 204, 126, 0.938);
+// //         box-shadow: 0.25rem 0.25rem 0rem #135a2873;
+// //         border-radius: 15px;             
+// //         col{
+// //             display: flex;
+// //                 width: 100%;
+// //                 flex: 0 0 100%;
 
-//         } 
+// //         } 
 
-//         .form-group {
-//             flex: 0 1 100%;
+// //         .form-group {
+// //             flex: 0 1 100%;
             
-//                 label{
-//                     font-size: 1.5rem;
-//                     color: white;
+// //                 label{
+// //                     font-size: 1.5rem;
+// //                     color: white;
                    
-//                 }
-//                 input, textarea {
+// //                 }
+// //                 input, textarea {
                     
-//                     border: none;
-//                     cursor: pointer;
-//                     color: black;
+// //                     border: none;
+// //                     cursor: pointer;
+// //                     color: black;
                    
-//                     font-size: 1.2rem;
-//                     font-weight: 300;
+// //                     font-size: 1.2rem;
+// //                     font-weight: 300;
                     
-//                     border-bottom: 2px solid #135a28;
-//                     margin: 8px;
+// //                     border-bottom: 2px solid #135a28;
+// //                     margin: 8px;
                     
-//                     &:focus{ 
-//                         border: none;
-//                         outline: none;
-//                         border-bottom: 2px solid #135a28;
-//                     }
-//                 }
-//              }
-//              button {                    
-//                  width: 200px;
-//                  height: 60px;
-//                  cursor: pointer;
-//                  border: none;
-//                  outline: none;
+// //                     &:focus{ 
+// //                         border: none;
+// //                         outline: none;
+// //                         border-bottom: 2px solid #135a28;
+// //                     }
+// //                 }
+// //              }
+// //              button {                    
+// //                  width: 200px;
+// //                  height: 60px;
+// //                  cursor: pointer;
+// //                  border: none;
+// //                  outline: none;
 
-//              }
-//              textarea{
-//                  justify-content: center;
-//                 height: 100px;
-//                 width: 700px;
-//              }
-//     }
+// //              }
+// //              textarea{
+// //                  justify-content: center;
+// //                 height: 100px;
+// //                 width: 700px;
+// //              }
+// //     }
 
 
 
