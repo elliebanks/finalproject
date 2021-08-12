@@ -10,7 +10,7 @@ form {							color: #fff}
 .form .control { 				width: calc(100% - 40px); margin: 0; padding: 12px 0 10px 15px; display: inline-block; background-color: #cfcfcf; border:none;}
 .form .control2 { 				width: calc(50% - 120px); margin: 0; padding: 12px 0 10px 15px; display: inline-block; background-color: #cfcfcf; border:none;}
 .form .control3 { 				width: calc(57% - 40px); margin: 0; padding: 12px 0 10px 15px; display: inline-block; background-color: #cfcfcf; border:none;}
-.form .control, .form .control2, .form .control3, .form .text, .form .button { 				font-family: 'Montserrat', serif; color:#515050; font-size: 16px; line-height: 18px;}
+.form .control, .form .control2, .form .control3, .form .text, .form .button { 				font-family: 'Montserrat', serif; color:#000000; font-size: 16px; line-height: 18px;}
 .form .text { 					width: calc(100% - 40px); height:150px; margin: 0; padding: 15px; border: none; background-color: #cfcfcf;}
 .form .text::placeholder {      text-align: left;}
 .form .drop { 				    width: auto; margin: 0; padding: 10px 15px 9px; border-left: 1px solid #aaa; border-top: none; border-right: none; border-bottom: none; font-family: 'Montserrat', serif; color:#515050; background-color: #cfcfcf;}

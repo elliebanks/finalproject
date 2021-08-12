@@ -2,8 +2,9 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const RecImage: React.FC<RecipeProps> = (props) =>
+const RecIng: React.FC<RecIngProps> = (props) =>
 {
     const { id } = useParams<{ id: string }>();
 
@@ -14,26 +15,28 @@ const RecImage: React.FC<RecipeProps> = (props) =>
     {
         fetch(`http://localhost:3000/api/recipes/${id}`)
             .then(res => res.json())
-            .then(rec => setRecipe(rec.recipe))
+            .then(rec => setRecipe(rec.ingredients))
     }, []);
 
     return (
 
         <>
-            {rec.map((r, index) => (
-                <div className="secConHead">
-                    {/* inset imagelink component here */}
-                    <img className="aboutHeadImg" src={r.imagelink} alt={r.imagelink} />
-                </div>
-            ))}
+            {rec.map((r, index) =>
+            {
+                return (
+                    <>
+                        <li key={index}><FontAwesomeIcon icon="check-circle" /> {r.amount} {r.name}</li>
+                    </>
+                )
+            })}
         </>
 
     )
 }
 
-interface RecipeProps {  }
+interface RecIngProps { }
 
-export default RecImage;
+export default RecIng;
 
 
 

@@ -5,28 +5,33 @@ import { faUtensils, faStopwatch } from "@fortawesome/free-solid-svg-icons";
 import "../scss/searchresults.scss";
 import { Link } from "react-router-dom";
 
-const SearchResults: React.FC = () => {
+const SearchResults: React.FC = () =>
+{
+  document.documentElement.style.setProperty("--main-color", "#ffffff");
+  document.documentElement.style.setProperty("--second-color", "#ffffff");
+  document.documentElement.style.setProperty("--navtext-color", "#ffffff"); 
+  document.documentElement.style.setProperty("--navtextsec-color", "#31cc7f");
+
   const history = useHistory();
   const { text, searchBy }: { text: string; searchBy: string } = useParams();
 
   const [recipes, setRecipes] = useState([]);
-  //const handleBtnClick = (id) => history.push(`recipes/${id}`);
+  //const handleBtnClick = (id) => history.push(`recipes/${id}`); 
 
-  document.documentElement.style.setProperty("--main-color", "#31cc7f");
-  document.documentElement.style.setProperty("--second-color", "#196640");
-  document.documentElement.style.setProperty("--navtext-color", "#000000");
-  document.documentElement.style.setProperty("--navtextsec-color", "#ffffff");
-
-  useEffect(() => {
-    if (searchBy == "user") {
+  useEffect(() =>
+  {
+    if (searchBy == "user")
+    {
       fetch(`/api/recipes/search-user/${text}`)
         .then((res) => res.json())
         .then((recipes) => setRecipes(recipes));
-    } else if (searchBy == "ingredient") {
+    } else if (searchBy == "ingredient")
+    {
       fetch(`/api/recipes/search-ing/${text}`)
         .then((res) => res.json())
         .then((recipes) => setRecipes(recipes));
-    } else if (searchBy == "title") {
+    } else if (searchBy == "title")
+    {
       console.log("Hey");
 
       fetch(`/api/recipes/search-recipetitle/${text}`)
@@ -77,9 +82,10 @@ const SearchResults: React.FC = () => {
                 >
                   {recipe.description}
                 </p>
-                <Link to ={`/recipes/${recipe.id}`} className = 'btn btn-dark btn square'>Full Recipe</Link>
-                
-                
+                sdfsdfsdfsdfsdfsdfsdfsfd
+                <Link to={`/recipes/${recipe.id}`} className='btn btn-dark btn square'>Full Recipe</Link>
+
+
               </div>
             </div>
           </div>

@@ -37,19 +37,22 @@ const App = (props: AppProps) => {
 			<Switch>
 				<Route exact path ="/" component={Home} />
 
-				<Route exact path="/about" component={About}/>
+				<Route exact path="/results/:searchBy/:text" component={SearchResults}/>
 			
-				<Route exact path="/recipes" component={RecipeSearch}/>
+				<Route exact path="/recipes">
+					<RecipeSearch/>
+				</Route>
 				
 				<Route exact path="/recipes/:id">
 					<SingleRecipe/>
 				</Route>
+								
+				<Route exact path="/about" component={About}/>
 
 				<Route exact path="/submit">
 					<SubmitForm />
 				</Route>
 
-				<Route exact path="/results/:searchBy/:text" component={SearchResults}/>
 				
 				<Route exact path="/contact" component={Contact} />
 			</Switch>	

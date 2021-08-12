@@ -8,8 +8,15 @@ div#recipes.bgColor {           width: 100%; height: 144px; display: block; posi
 .recipeCardImgWrap {            width: 100%; height: 300px; background-color: #f09;}
 img.recipeCardImg {             width: 100%; height: 100%; object-fit: cover;}
 
-
-
 .recHeadCon {                   width: 100%; padding: 0;}
 .recHeadImg {                   width: 100%; height: 100%; object-fit: cover;}
+
+/* Single Recipe Page SCSS
+================================================== */
+.recipe .secHeadTitle h1 {      color: #fff;}
+.recipe h3 {                    color: #000;}
+.recipe .secHeadTitle h6 {      color: #fff;}
+.recipe p {                     margin-bottom: 20px;}
+.recipe ul {                    margin: 0; padding: 0 0 0 7px; list-style: none;}
+.recipe ul svg {                color: #31cc7f;}
 

@@ -3,26 +3,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUtensils, faStopwatch } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-const RecipeSearch = () =>
+const RecipeSearch: React.FC<SearchProps> = (props) =>
 {
-    document.documentElement.style.setProperty("--main-color", "#31cc7f");
-    document.documentElement.style.setProperty("--second-color", "#196640");
-    document.documentElement.style.setProperty("--navtext-color", "#000000");
-    document.documentElement.style.setProperty("--navtextsec-color", "#ffffff");
+    document.documentElement.style.setProperty("--main-color", "#ffffff");
+    document.documentElement.style.setProperty("--second-color", "#ffffff");
+    document.documentElement.style.setProperty("--navtext-color", "#ffffff");
+    document.documentElement.style.setProperty("--navtextsec-color", "#31cc7f");
 
-    const [recipes, setRecipes] = useState([]);   
+    const [recipes, setRecipes] = useState([]);
 
     useEffect(() =>
     {
         fetch('http://localhost:3000/api/recipes')
             .then(res => res.json())
             .then(recipes => setRecipes(recipes))
-    }, []);    
+    }, []);
 
     return (
-
         <>
             <div id="recipes" className="bgColor"></div>
 
@@ -62,7 +61,7 @@ const RecipeSearch = () =>
                                             </div>
 
                                             <p className="card-text d-flex justify-content-center" id="recipeDescription">{recipe.description}</p>
-                                            <Link to ={`recipes/${recipe.id}`} className = 'btn btn-dark btn square'>Full Recipe</Link>
+                                            <Link to={`recipes/${recipe.id}`} className='btn btn-dark btn square'>Full Recipe</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -74,25 +73,10 @@ const RecipeSearch = () =>
 
                 </div>
             </div>
-
-            {/* <div className="container mb-5" id="recipeCardContainer">
-                <div className="row d-flex justify-content-center">
-
-                    
-                </div>
-            </div> */}
-
         </>
-
-
-
-
-
-
     )
-}
+};
 
-export default RecipeSearch;
+interface SearchProps { }
 
-
-
+export default RecipeSearch
