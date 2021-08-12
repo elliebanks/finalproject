@@ -1,7 +1,35 @@
-home.body {    
-    font-family: 'Montserrat', sans-serif;
-}
+.carousel-inner, .carousel-item {                   height: 500px; position: relative;}
 
+.jumboText {                            width: 600px; display: block; position: absolute; bottom: 10px; left: 0;}
+.jumboText h1 {                         font-size:  66px; line-height: 66px; color: #000;}
+.jumboText p {                          margin: 30px 0; color: #000;}
+.jumboText a {                          font-weight: 900; padding: 15px; margin: 5px 0; display: inline-block; color: #fff; background-color: #31cc7f;}
+.jumboText a:hover {                    background-color: #196640; text-decoration: none;}
+.jumboText a:link, .jumboText a:visited, .jumboText a:active {      color: #fff;}
+
+.conHome h1 {                           margin: 0 0 20px;}
+.conHome a {                            font-weight: 900; padding: 15px; margin: 20px 0; display: inline-block; color: #fff; background-color: #31cc7f;}
+.conHome a:hover {                      background-color: #196640; text-decoration: none;}
+.conHome a:link, .conHome a:visited, .conHome a:active {      color: #fff;}
+.conHome b {                            color:#31cc7f;}
+
+.homeSearch {               position: relative;}
+.searchbg {                 height: 300px;  border-radius: 25px; overflow: hidden;}
+.searchbg img {             width: 100%; filter: blur(10px); object-fit: cover; object-position: center top; object-position: 0 -250px;}
+
+.searchbar {                width: 75%; position: absolute; top:110px; left:160px;}
+.searchbar h1 {                color: #fff; margin: 0 0 20px; text-align: center;}
+.searchbar .group {             		width: 100%; height: auto; position: relative; display: inline-block; margin-bottom: 20px;}
+.searchbar .control { 				width: calc(100% - 275px); margin: 0; padding: 12px 0 10px 15px; float: left; background-color: #cfcfcf; border:none;}
+.searchbar .control { 				font-family: 'Montserrat', serif; color:#000000; font-size: 16px; line-height: 18px;}
+.searchbar .addon {					width: 40px; height: 40px; text-align: center; float: left; background-color: #31cc7f;}
+.searchbar .addon svg {              display: inline-block; font-size: 24px; line-height: 40px; text-align: center; margin: 8px 0 0; color: #fff;}
+.searchbar .drop { 				    width: auto; float: left; margin: 0; padding: 10px 15px 9px; border-left: 1px solid #aaa; border-top: none; border-right: none; border-bottom: none; font-family: 'Montserrat', serif; color:#515050; background-color: #cfcfcf;}
+#submitForm {                       margin:0; padding:0;}
+.btn {                              border: none; float: left; margin: 0 !important; padding: 0 !important;}
+.btn a {                            font-weight: 900; padding: 8px 14px; margin: 0; border: none; float: left;color: #fff; background-color: #31cc7f;}
+.btn a:hover {                      background-color: #196640; border: none; text-decoration: none;}
+.btn a:link, .conHome a:visited, .conHome a:active {      color: #fff;}
 
 #homeHeadline {
     color: black !important;
@@ -60,13 +88,7 @@ button:hover {
 //     color:white !important;
 // }
 
-#submitButton { 
-            font-size: 1.2rem;
-            margin: 10px;         
-            border: none;
-            cursor: pointer;
-        
-        } 
+
 #bottomImage{
     display: flex;
     justify-content: center !important;

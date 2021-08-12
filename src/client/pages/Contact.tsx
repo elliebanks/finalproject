@@ -12,12 +12,12 @@ const Contact = () =>
     document.documentElement.style.setProperty("--second-color", "#ffffff");
     document.documentElement.style.setProperty("--navtext-color", "#ffffff");
     document.documentElement.style.setProperty("--navtextsec-color", "#31cc7f");
-    
+
     return (
         <>
             <div id="backDiv" className="bgColor"></div>
 
-            <div className="container">
+            <div className="container mb-5">
                 <div className="row">
                     <div className="col-8 leftColumn">
                         <section>
@@ -25,79 +25,91 @@ const Contact = () =>
                                 <h1>Contact Us</h1>
                                 <h6>Contact <span className="from">from.</span><span className="skratch">skratch</span> and the development team.</h6>
                             </div>
-                            <div className="secContent">
+                            <div className="secContent mb-5">
                                 <h3>
                                     Get in touch with the <span className="from">from.</span><span className="skratch">skratch</span> team!!
                                 </h3>
                                 <p id="secContentText">
                                     Questions, suggestions, feedback? We are ready to help. Please fill out the form below and a team member will follow up with you shortly.
                                     You may also refer to our contact information if you need further assistance!
-                                     <span className="from ml-2">from.</span><span className="skratch mr-1">skratch</span> is here for you!
+                                    <span className="from ml-2">from.</span><span className="skratch mr-1">skratch</span> is here for you!
                                 </p>
                             </div>
                         </section>
+
                         <section>
+                            <div className="secContent">
+                                <h3>
+                                    Submit Your Comments:
+                                </h3>
+                            </div>
 
                             {/* user contact submission form */}
-                            <form id="userContactForm">
-                                <div className="col">
-                                    <div className="form-group">
-
-                                        <input type="text" placeholder="First Name" className="" />
+                            <form id="recipeSubForm" className="contact form" action="formsubmissions.html" method="GET">
+                                <div className="group">
+                                    <div className="addon">
+                                        <FontAwesomeIcon icon="user" />
                                     </div>
-
-                                    <div className="form-group">
-
-                                        <input type="text" placeholder="Last Name" className="" />
-                                    </div>
-                                </div>
-                                <div className="col">
-                                    <div className="form-group">
-
-                                        <input type="email" placeholder="Email Address" className="" />
-                                    </div>
-                                    <div className="form-group">
-
-                                        <input type="tel" id="phone" placeholder="Phone Number" className="" />
-                                    </div>
+                                    <input className="control" type="text" placeholder="First Name" />
                                 </div>
 
-                                <div className="col">
-                                    <div className="form-group">
-
-                                        <input type="text" placeholder="Message Subject" className="" />
+                                <div className="group">
+                                    <div className="addon">
+                                        <FontAwesomeIcon icon="user" />
                                     </div>
-
-                                    <div className="form-group">
-
-                                        <input type="text" placeholder="Company Name" className="" />
-                                    </div>
+                                    <input className="control" type="text" placeholder="Last Name" />
                                 </div>
-                                <div className="col">
-                                    <div className="form-group">
 
-                                        <textarea id="messageBox" placeholder="Message">
-
-                                        </textarea>
+                                <div className="group">
+                                    <div className="addon">
+                                        <FontAwesomeIcon icon="at" />
                                     </div>
+                                    <input className="control" type="email" placeholder="Email Address" />
                                 </div>
-                                <div className="col">
-                                    <div className="form-group">
-                                        <button type="submit" className="btn btn-dark btn-square hover-effect">Submit Form</button>
+
+                                <div className="group">
+                                    <div className="addon">
+                                        <FontAwesomeIcon icon="phone" />
                                     </div>
+                                    <input className="control" type="tel" id="phone" placeholder="Phone Number" />
+                                </div>
+
+                                <div className="group">
+                                    <div className="addon">
+                                        <FontAwesomeIcon icon="building" />
+                                    </div>
+                                    <input className="control" type="text" placeholder="Company Name" />
+                                </div>
+
+                                <div className="group">
+                                    <div className="addon">
+                                        <FontAwesomeIcon icon="signature" />
+                                    </div>
+                                    <input className="control" type="text" placeholder="Message Subject" />
+                                </div>
+
+                                <div className="group">
+                                    <div className="addon">
+                                        <FontAwesomeIcon icon="clipboard-list" />
+                                    </div>
+                                    <textarea
+                                        className="text"
+                                        placeholder="Message Subject"
+                                        name="Directions"
+                                    />
                                 </div>
                             </form>
                         </section>
                     </div>
                     <div className="col-4">
-                        <div className="secConHead">
+                        <div className="secConHead mb-4">
                             <img className="aboutHeadImg" src="/images/donene.jpg" alt="image" />
                         </div>
-                        {/* from skratch 'contact info section' */}
-                        <div id="contact-container">
-                            <div className="contact-info">
-                                <h4>Contact Information</h4>
-                                <p className="sub-title">Please fill out the form and the from.Skratch team will get back to you.</p>
+
+                        <div className="secContent">
+                            <div className="contact con">
+                                <h3>Contact Information</h3>
+                                <p id="secContentText">Please fill out the form and the <span className="from">from.</span><span className="skratch">skratch</span> team will get back to you.</p>
                                 <div className="icon-text">
                                     <FontAwesomeIcon className="fa" icon={faPhoneAlt} />
                                     <span>205-987-2321</span>
@@ -111,6 +123,7 @@ const Contact = () =>
                                     <span>1234 Vulcan Rd Birmingham, AL 35205</span>
                                 </div>
                                 <div className="social-media">
+                                <h3>Follow Our Social Media</h3>
                                     <a href="#" className="icon-circle">
                                         <i><FontAwesomeIcon className="fa" icon={faFacebookSquare} /></i>
                                     </a>
@@ -123,6 +136,7 @@ const Contact = () =>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>

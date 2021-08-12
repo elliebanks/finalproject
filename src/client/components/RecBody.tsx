@@ -40,7 +40,7 @@ const RecBody: React.FC<RecipeProps> = (props) =>
                             {r.cooktime}
                         </p>
                         <h3>
-                            <FontAwesomeIcon icon="users" /> Servings:
+                            <FontAwesomeIcon icon="utensils" /> Servings:
                         </h3>
                         <p>
                             {r.servings}

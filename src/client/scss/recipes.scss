@@ -1,15 +1,24 @@
 
 /* Recipe Page SCSS
 ================================================== */
-/* About (Page) SCSS */
-div#recipes.bgColor {           width: 100%; height: 144px; display: block; position: absolute; top: 0; left: 0; z-index: -99;}
+/* Recipe results (Page) SCSS */
+div#recipes.bgColor {           width: 100%; height: 129px; display: block; position: absolute; top: 0; left: 0; z-index: -99;}
 
-.recipeCardWrap {               width: 100%; background-color: #31cc7f;}
+.recipeCardWrap {               width: 100%; padding: 10px; background-color: #dcdcdc;}
 .recipeCardImgWrap {            width: 100%; height: 300px; background-color: #f09;}
 img.recipeCardImg {             width: 100%; height: 100%; object-fit: cover;}
-
+.results .card-body {           padding: 0;}
+.results .button {              padding: 12px 15px 10px; font-weight: 800; text-decoration:  none; display: inline-block; background-color: #31cc7f; color: #fff; border:none;}
+.results .button:hover {        background-color: #196640;}
+.results svg {                  color: #31cc7f}
+.truncate {                     height: 72px; padding: 0 20px 0 0; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;}
+.zoom {                         border:1px solid #dcdcdc; box-shadow: 0 0 10px #fff; cursor: pointer;}
+.zoom:hover {                   border:1px solid #777; box-shadow: 0 0 10px #aaa; transform: scale(1.03); z-index: 1;}
 .recHeadCon {                   width: 100%; padding: 0;}
 .recHeadImg {                   width: 100%; height: 100%; object-fit: cover;}
+.results h1 {                   color: #fff;}
+.results h3 {                   margin: 20px 0 10px;}
+.results h6 {                   color: #fff;}
 
 /* Single Recipe Page SCSS
 ================================================== */

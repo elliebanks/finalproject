@@ -23,11 +23,11 @@ const RecipeSearch: React.FC<SearchProps> = (props) =>
 
     return (
         <>
-            <div id="recipes" className="bgColor"></div>
+            <div id="recipes" className="results bgColor"></div>
 
-            <div className="container mb-5">
-                <div className="row no-gutters-man">
-                    <div className="container">
+            <div className="container results mb-5">
+                <div className="row">
+                    <div className="col-12 mb-5">
                         <div id="sectionTitle" className="col secTitle text-center">
                             <h1>Recipes</h1>
                             <h6>The best recipes for you, submitted by people just like you!</h6>
@@ -35,40 +35,34 @@ const RecipeSearch: React.FC<SearchProps> = (props) =>
                     </div>
 
                     {/* component start */}
-
-                    <div className="container m-5">
-                        <div className="row">
-                            {recipes.map(recipe => (
-                                <div className="col-4 mb-3" id="recipeCard" key={recipe.id}>
-                                    <div className="recipeCardWrap">
-                                        <div className="recipeCardImgWrap">
-                                            <img src={recipe.imagelink} className="recipeCardImg" alt={recipe.imagelink} />
-                                        </div>
-                                        <div className="card-body mb-1">
-                                            <h4>{recipe.title}</h4>
-
-                                            <div className="" id="servingDetails">
-                                                <span className="d-flex inline">
-                                                    <FontAwesomeIcon className="m-1" icon={faUtensils} />
-                                                    <p className="servingSize"> Serving Size:  {recipe.servings}  </p> </span>
-                                            </div>
-
-                                            <div className="" id="cookingTimeDetails">
-                                                <span className="d-flex inline">
-                                                    <FontAwesomeIcon className="m-1" icon={faStopwatch} />
-                                                    <p> Cooking Time:  {recipe.cooktime}</p>
-                                                </span>
-                                            </div>
-
-                                            <p className="card-text d-flex justify-content-center" id="recipeDescription">{recipe.description}</p>
-                                            <Link to={`recipes/${recipe.id}`} className='btn btn-dark btn square'>Full Recipe</Link>
-                                        </div>
-                                    </div>
+                    {recipes.map(recipe => (
+                        <div className="col-4 mb-3" id="recipeCard" key={recipe.id}>
+                            <div className="recipeCardWrap zoom">
+                                <div className="recipeCardImgWrap">
+                                    <img src={recipe.imagelink} className="recipeCardImg" alt={recipe.imagelink} />
                                 </div>
-                            ))};
-                        </div>
-                    </div>
+                                <div className="card-body mb-1">
+                                    <h3>{recipe.title}</h3>
 
+                                    <div className="" id="servingDetails">
+                                        <span className="d-flex inline">
+                                            <FontAwesomeIcon className="m-1" icon={faUtensils} />
+                                            <p className="servingSize"> Serving Size:  {recipe.servings}  </p> </span>
+                                    </div>
+
+                                    <div className="" id="cookingTimeDetails">
+                                        <span className="d-flex inline">
+                                            <FontAwesomeIcon className="m-1" icon={faStopwatch} />
+                                            <p> Cooking Time:  {recipe.cooktime}</p>
+                                        </span>
+                                    </div>
+
+                                    <p className="card-text truncate" id="recipeDescription">{recipe.description}</p>
+                                    <Link to={`recipes/${recipe.id}`} className='button'>Full Recipe</Link>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                     {/* component end */}
 
                 </div>

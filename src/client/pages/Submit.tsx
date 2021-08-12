@@ -137,7 +137,7 @@ const SubmitForm: React.FC = (props) =>
 
                                 <div className="group">
                                     <div className="addon">
-                                        <FontAwesomeIcon icon="users" />
+                                        <FontAwesomeIcon icon="utensils" />
                                     </div>
                                     <input className="control2" value={servings} placeholder="Servings | ex: 6" type="text" name="Servings" onChange={e => setServings(e.target.value)} />
                                 </div>

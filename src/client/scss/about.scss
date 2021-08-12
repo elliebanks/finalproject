@@ -10,11 +10,11 @@ div.bgColor {           width: 100%; height: 144px; display: block; position: ab
 div.card {              width: 18rem;}
 
 .aboutTeam {            margin: 70px auto;}
-div.card {              width: 100% !important; margin: 0 0 20px !important; border: none; background-color: #31cc7f;}
-div.card-container {    height: 200px; padding: 15px 0 0; margin: 0 0 60px; border-radius: 5px 5px 0 0; text-align: center; overflow: visible; background-size: cover; }
-img.card-img {          width: 250px; height: 250px; object-fit: cover; border: 5px solid #31cc7f; border-radius: 50%; object-position: center top; object-position: 0 -50px;}
-div.card-body {         border-radius: 0 0 5px 5px; background-color: #31cc7f;}
+.aboutTeam div.card {              width: 100% !important; margin: 0 0 20px !important; border: none; background-color: #31cc7f;}
+.aboutTeam div.card-container {    height: 200px; padding: 15px 0 0; margin: 0 0 60px; border-radius: 5px 5px 0 0; text-align: center; overflow: visible; background-size: cover; }
+.aboutTeam img.card-img {          width: 250px; height: 250px; object-fit: cover; border: 5px solid #31cc7f; border-radius: 50%; object-position: center top; object-position: 0 -50px;}
+.aboutTeam div.card-body {         border-radius: 0 0 5px 5px; background-color: #31cc7f;}
 
-div.card-body h3 {          margin: 0 0 3px; color: #fff;}
-div.card-body p {           color: #fff;}
+.aboutTeam div.card-body h3 {          margin: 0 0 3px; color: #fff;}
+.aboutTeam div.card-body p {           color: #fff;}
 
