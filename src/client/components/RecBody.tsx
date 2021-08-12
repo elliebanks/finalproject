@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const RecBody: React.FC<RecipeProps> = (props) =>
 {
@@ -17,38 +18,43 @@ const RecBody: React.FC<RecipeProps> = (props) =>
             .then(rec => setRecipe(rec.recipe))
     }, []);
 
-
-    console.log(rec);
-
     return (
 
         <>
-            {rec.map((r, index) => (
+            {rec.map((r) => (
                 <>
                     <div id="sectionTitle" className="secHeadTitle">
                         <h1>{r.title}</h1>
                         <h6>Static tagline with <span className="from">from.</span><span className="skratch">skratch</span> logo included.</h6>
                     </div>
                     <div className="secContent">
-                        <h4>
-                            Description:
-                        </h4>
+                        <h3>
+                            <FontAwesomeIcon icon="pencil-alt" /> Description:
+                        </h3>
                         <p>
                             {r.description}
                         </p>
+                        <h3>
+                            <FontAwesomeIcon icon="stopwatch" />CookTime</h3>
                         <p>
-                            CookTime: {r.cooktime}
+                            {r.cooktime}
                         </p>
+                        <h3>
+                            <FontAwesomeIcon icon="users" /> Servings:
+                        </h3>
                         <p>
-                            CookTime: {r.servings}
+                            {r.servings}
                         </p>
-                        <h4>
-                            Directions:
-                        </h4>
+                        <h3>
+                            <FontAwesomeIcon icon="clipboard-list" /> Directions:
+                        </h3>
                         <p>
                             {r.directions}
                         </p>
-                        Insert Ingredients List Here
+                        <h3>
+                            <FontAwesomeIcon icon="balance-scale" />  Ingredients:
+                        </h3>
+
                     </div>
                 </>
             ))}

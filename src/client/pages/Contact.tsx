@@ -8,6 +8,11 @@ import { faFacebookSquare, faTwitter, faInstagram, } from '@fortawesome/free-bra
 
 const Contact = () =>
 {
+    document.documentElement.style.setProperty("--main-color", "#ffffff");
+    document.documentElement.style.setProperty("--second-color", "#ffffff");
+    document.documentElement.style.setProperty("--navtext-color", "#ffffff");
+    document.documentElement.style.setProperty("--navtextsec-color", "#31cc7f");
+    
     return (
         <>
             <div id="backDiv" className="bgColor"></div>
